@@ -1,14 +1,14 @@
-##### Describe the last program or script that you wrote. What problem did it solve? 
+### Describe the last program or script that you wrote. What problem did it solve? 
 
-##### How would you implement a secure login field on a high traffic website where performance is a consideration? 
+### How would you implement a secure login field on a high traffic website where performance is a consideration? 
 
 The answer you’re looking for here is that TLS is a must for the entire site at this point, and that there are very few situations where you shouldn’t insist on encryption. 
 
-##### What are the various ways to handle account brute forcing? 
+### What are the various ways to handle account brute forcing? 
 
 account lockouts, IP restrictions, fail2ban, commercial versions thereof, etc. 
 
-##### What is XSS, stored XSS, reflected XSS and DOM-based XSS?
+### What is XSS, stored XSS, reflected XSS and DOM-based XSS?
 
 XSS: injects malicious code into a vulnerable web application. XSS differs from other web attack vectors (e.g., SQL injections), in that it does not directly target the application itself. Instead, the users of the web application are the ones at risk. 
 
@@ -18,7 +18,7 @@ Reflected XSS: Reflected XSS involves the reflecting of a malicious script off o
 
 DOM-based XSS: an advanced type of XSS attack which is made possible when the web application’s client side scripts write user provided data to the Document Object Model (DOM). The data is subsequently read from the DOM by the web application and outputted to the browser. If the data is incorrectly handled, an attacker can inject a payload, which will be stored as part of the DOM and executed when the data is read back from the DOM. 
 
-##### Prevention on XSS 
+### Prevention on XSS 
 
 Input Validation and Output Sanitization, with focus on the latter. 
 
@@ -26,9 +26,9 @@ XSS can be prevented by the use of the proper available sanitizers. Web develope
 
 There are software or applications available for doing this, like the XSS Me for Firefox and DOM snitch for Google Chrome. Also, the default web application firewall formula, popularly 
 
-##### What is Cross-Site Request Forgery CSRF? 
+### What is Cross-Site Request Forgery CSRF? 
 
-##### How does one defend against CSRF? 
+### How does one defend against CSRF? 
 
 Nonce required by the server for each page or each request is an accepted, albeit not foolproof, method. 
 
@@ -38,15 +38,15 @@ Firstly, with every request try to include a random token. In this way a unique 
 
 Secondly, for each field of form, try using different names. This will somewhat help you in becoming anonymous due to the entry of so many different names and thus will behave as a safeguard from CSRF attacks. 
 
-##### What’s the difference between HTTP and HTML? 
+### What’s the difference between HTTP and HTML? 
 
 One is the networking/application protocol and the other is the markup language 
 
-##### How does HTTP handle state? 
+### How does HTTP handle state? 
 
 It doesn’t. Not natively. Good answers are things like “cookies”, but the best answer is that cookies are a hack to make up for the fact that HTTP doesn’t do it itself. 
 
-##### What is Exfiltration? Data Exfiltration 
+### What is Exfiltration? Data Exfiltration 
 
 Infiltration is the method by which you enter or smuggle elements into a location. Exfiltration is just the opposite: getting sensitive information or objects out of a location without being discovered. In an environment with high security, this can be extremely difficult but not impossible. Again we turn to our friends in the fake delivery uniforms wandering around the building, and see that yes there are ways to get in and out without a lot of issues. 
 

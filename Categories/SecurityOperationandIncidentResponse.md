@@ -1,42 +1,42 @@
-##### You’ve identified an active c2 channel in your network. What do you do? 
+### You’ve identified an active c2 channel in your network. What do you do? 
 
-##### How do you stay up to date with the latest cyber security news? 
+### How do you stay up to date with the latest cyber security news? 
 
-##### Tell me about some recent vulnerabilities and why they caught your attention in the last six months. 
+### Tell me about some recent vulnerabilities and why they caught your attention in the last six months. 
 
-##### Describe in as much detail as possible what happens when you type google into the address bar if your browser and hit enter 
+### Describe in as much detail as possible what happens when you type google into the address bar if your browser and hit enter 
 
 ![](https://pbs.twimg.com/media/EcmG_g4WoAI2rTv?format=jpg&name=large)
 
-##### What are some common ways an attacker may move laterally throughout the network? ( stupid terms: move east/west in a network) 
+### What are some common ways an attacker may move laterally throughout the network? ( stupid terms: move east/west in a network) 
 
-##### Are you familiar with ATT&CK? Tell me a little bit about it. 
+### Are you familiar with ATT&CK? Tell me a little bit about it. 
 
 https://attack.mitre.org/
 
-##### What is considered as an investigation? 
+### What is considered as an investigation? 
 
 An act of spending time and/or effort trying to find more information or an answer or a thing. 
 
-##### What is a Cybersecurity event vs incident? 
+### What is a Cybersecurity event vs incident? 
 
 An event will be anything that happens related to cybersecurity, incident, will be an event that may cause damage or create risk to assets. 
 
-##### How do you use Python to write log parsers and/or utilities in scripting languages? 
+### How do you use Python to write log parsers and/or utilities in scripting languages? 
 
-##### What is DevOps? Why is it useful?  
+### What is DevOps? Why is it useful?  
 
 DevOps is a methodology that combines the software development part and the technology operation part. It makes software delivering, fixing bugs and providing updates easier and faster for both developer and operator.  
 
-##### Describe Your familiarity with DevOps philosophy and toolset (Ansible, Terraform, Jenkins, etc.) 
+### Describe Your familiarity with DevOps philosophy and toolset (Ansible, Terraform, Jenkins, etc.) 
 
-##### What is Jenkins? Why use it? When do you use it? How do you use it? How is it helping the company? 
+### What is Jenkins? Why use it? When do you use it? How do you use it? How is it helping the company? 
 
-##### What is Ansible? Why use it? When do you use it? How do you use it? How is it helping the company? 
+### What is Ansible? Why use it? When do you use it? How do you use it? How is it helping the company? 
 
-##### How do you automate tasks? 
+### How do you automate tasks? 
 
-##### What is an investigation methodology?  
+### What is an investigation methodology?  
 
 An investigation methodology is a framework or guidelines that gave you instruction or point you an direction at what you should do during an investigation. 
 
@@ -78,7 +78,7 @@ Example:
     - Create the chain of events 
     - Find answers for Who What When Why How 
 
-##### If there is a suspicious network security event found and you are assigned to investigate: 
+### If there is a suspicious network security event found and you are assigned to investigate: 
 
 - What will you first do? 
   - Depends on the severity of the event, I will either isolate the system or start collecting information I need. 
@@ -127,7 +127,7 @@ Example:
   - I'll see if there's anything that we can do to help prevent similar incidents from happening again, some examples will be like firewall rules or even policy and guidelines. 
   - What is the root cause 
 
-##### Often there will be stress to investigate suspected serious security incident in a tight timeline, if you only have limited info to start with, but you are required to get this analysis done in 2 days,  
+### Often there will be stress to investigate suspected serious security incident in a tight timeline, if you only have limited info to start with, but you are required to get this analysis done in 2 days,  
 
 - What will you plan to do for 2 days?  
   - I will try to set out some goals and list the tasks that need to be done then prioritize them and start with the most important tasks. 
@@ -142,25 +142,25 @@ Example:
 - What resources will you need? 
   - I will need all the logs with timestamps of the systems and devices that are related to the incident, I might also need a help from engineers of the system who have better understand about the system and how incident like that might happens. 
 
-##### What is IaaS?  
+### What is IaaS?  
 
 A IaaS, or Infrastructure as a Service, is one of the cloud service that the providers provide the server, storage and networking, the customers will take care of the OS and everything above that 
 
-##### How much do you know about AWS IaaS? 
+### How much do you know about AWS IaaS? 
 
 I do have experience setting up AWS ECS and manage it, therefore I know how to set them up and how it works. 
 
-##### How do you get the logs from AWS IaaS? 
+### How do you get the logs from AWS IaaS? 
 
 AWS do have a service called CloudWatch that will handle the logs and information from different AWS EC2 and other service, where you can view and manage the logs. 
 
 If you want to see logs and console output for a single instance, it can be found in the Amazon EC2 console  
 
-##### What logs can you get from AWS IaaS logs? 
+### What logs can you get from AWS IaaS logs? 
 
 You will be able to get system logs, console output 
 
-##### What is IaaS vs PaaS vs SaaS? 
+### What is IaaS vs PaaS vs SaaS? 
 
 In IaaS, provider handles networking, virtual machines, storage. Client has the most flexibility but have to manage many things 
 
@@ -168,7 +168,7 @@ In PaaS, provider handles what's handled in IaaS and also OS, runtime and some o
 
 In SaaS, provider handles everything, client can use the product directly without handling or maintaining anything. 
 
-##### How do you conduct an in-depth vulnerability assessments and information system auditing of assets (e.g. servers, Workstations, Network Appliances, Storage Devices, and Applications)? 
+### How do you conduct an in-depth vulnerability assessments and information system auditing of assets (e.g. servers, Workstations, Network Appliances, Storage Devices, and Applications)? 
 
 - What is the methodology?
 - What info do you need to start the assessment?
@@ -206,13 +206,13 @@ In SaaS, provider handles everything, client can use the product directly withou
       - If you cannot recreate it, it's not an issue
     - Actual risk / actual impact
 
-##### Have you heard of Indicator of Compromise (IOC)? 
+### Have you heard of Indicator of Compromise (IOC)? 
 
-##### How do you use IoC to help you in an investigation? 
+### How do you use IoC to help you in an investigation? 
 
-##### Will you use OSINT?  
+### Will you use OSINT?  
 
-##### What is OSINT? How do you use it? Any tools you will use to help you? 
+### What is OSINT? How do you use it? Any tools you will use to help you? 
 
 - dig 
 - Censys 

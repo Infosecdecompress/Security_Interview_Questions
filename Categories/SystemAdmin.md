@@ -1,22 +1,22 @@
-##### How do you change your DNS settings in Linux/Windows? 
+### How do you change your DNS settings in Linux/Windows? 
 
 Windows: Internet adapter/ 
 
 Linux: sudo nano /etc/resolv.conf  add nameserver x.x.x.x 
 
-##### Cyber Crime vs Cyber-enabled crime 
+### Cyber Crime vs Cyber-enabled crime 
 
 Cyber-enabled crime: traditional crime that is amplified by the use of computer tech 
 
 Cyber Crime: illegal action involving network or computer where it used to commit the crime 
 
-##### What is the main goal of information security within an organization or company? 
+### What is the main goal of information security within an organization or company? 
 
 Protect CIA (Confidentiality, Integrity, Availability)
 
-##### What are the consequences of a cyber-attack? 
+### What are the consequences of a cyber-attack? 
 
-##### First step of securing Linux Server 
+### First step of securing Linux Server 
 
 Auditing: A system scan is performed using a tool called Lynis for auditing. Every category is scanned separately and the hardening index is provided to the auditor for further steps. 
 
@@ -24,7 +24,7 @@ Hardening: After the audit is complete, the system is hardened depending on the 
 
 Compliance: The system needs to be checked almost every day for better results and also lesser threats from security point of view. 
 
-##### How to secure a Web Server 
+### How to secure a Web Server 
 
 - Anti-virus and firewalls 
 - Safe installation and configuration of the web server software 

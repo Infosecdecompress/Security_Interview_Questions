@@ -1,8 +1,8 @@
-##### What is the primary reason most companies haven’t fixed their vulnerabilities? 
+### What is the primary reason most companies haven’t fixed their vulnerabilities? 
 
-##### What’s the goal of information security within an organization? 
+### What’s the goal of information security within an organization? 
 
-##### If you were to start a job as head engineer or CSO at a Fortune 500 company due to the previous guy being fired for incompetence, what would your priorities be? 
+### If you were to start a job as head engineer or CSO at a Fortune 500 company due to the previous guy being fired for incompetence, what would your priorities be? 
 
 (Imagine you start on day one with no knowledge of the environment. )
 
@@ -16,7 +16,7 @@
 
 The key is to see that they could quickly prioritize, in just a few seconds, what would be the most important things to learn in an unknown situation. 
 
-##### As a corporate Information Security professional, what’s more important to focus on: threats or vulnerabilities? 
+### As a corporate Information Security professional, what’s more important to focus on: threats or vulnerabilities? 
 
 Vulnerabilities should usually be the main focus since we in the corporate world usually have little control over the threats. 
 
