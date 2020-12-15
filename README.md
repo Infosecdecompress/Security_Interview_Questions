@@ -24,14 +24,7 @@
 | [System Admin](Categories/SystemAdmin.md)                               |
 | [Behavior Questions](Categories/BehaviorQuestion.md)                    |
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
 # License
 The theme is Copyright of Patrick Marsceill, licensed under [MIT license.](https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt)
 
-This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+Content on this site is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
