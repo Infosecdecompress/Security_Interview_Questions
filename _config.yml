@@ -1,7 +1,6 @@
 title: 資安工作面試
 description: A資安相關職位時可能會問到的問題
 remote_theme: pmarsceill/just-the-docs@v0.3.3
-url: "https:jobs.infosecdecompress.com"
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "Rakefile"
