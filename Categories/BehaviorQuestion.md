@@ -12,6 +12,7 @@
 * Tell me about the last time you had to apologize to someone. 
 * Tell me about a recent situation in which you had to deal with a very upset customer or co-worker. 
 * Describe a time when you receive a critical feedback from a customer/client. How did you deal with it 
+
 ### OWNERSHIP:  
 * When did you take a risk, make a mistake, or fail? How did you respond, and how did you grow from that experience? 
 * Tell me about a time when you could not deliver a task in time, or had to leave a task unfinished 
@@ -19,12 +20,14 @@
 * What is the worst mistake you ever made? What did you learn from it? 
 * Tell me a time when you messed up something at work, how did you handle it 
 * Tell me about a time when you had to work on a project with unclear responsibilities 
+
 ### INVENT AND SIMPLIFY:  
 * Tell me a time when you created an innovative product 
 * Tell me a time you find a new way to do something 
 * Tell me about a time when you invented something 
 * Tell me about a time when you gave a simple solution to a complex problem 
 * Tell me a challenge you had where the best way forward was not clear cut. How did you decide what to do? 
+
 ### ARE RIGHT, A LOT:  
 * Tell me a time you think you were right, but you were wrong 
 * Tell me a time you think you were wrong, but you were right. 
@@ -33,13 +36,16 @@
 * How do you find the time to stay inspired, acquire new knowledge, innovate in your work? 
 * Tell me about a time when you influenced a change by only asking questions. 
 * Tell me about a time when you solved a problem through just superior knowledge or observation. 
+
 ### HIRE AND DEVELOP THE BEST:  
 * Tell me about a time when you had to deal with a poor performer on your team. 
 * Tell me about a time when you mentored/coached someone. 
+
 ### INSIST ON THE HIGHEST STANDARDS:  
 * Tell me about a time when you could have stopped working but persisted. 
 * Tell me about a time when you couldn't meet your own expectations on a project. 
 * Tell me about a time when a team member didn't meet your expectations on a project. 
+
 ### THINK BIG:  
 * Tell me about a time when you proposed a new business. 
 * Tell me about your proudest professional achievement. 
@@ -47,6 +53,7 @@
 * How will you exceed your boss expectation? any experience about that? 
 * Describe a time when you delivered something above the client's requirements 
 * Talk about any contribution you did voluntarily 
+
 ### BIAS FOR ACTION:  
 * Describe how you would handle a busy situation where three people are waiting for help from you. 
 * Talk to each of them briefly and understand the situation, see if I can prioritize the tasks or done some tasks that can benefit more than one people first 
@@ -61,9 +68,11 @@
 * How will you do things when resource is limited? 
 * How do you make decision when no sufficient data is around? 
 * How do you make decision/impact on business when your supervisor is not around? 
+
 ### FRUGALITY:  
 * Tell me about a time where you thought of a clever new way to save money for the company. 
 * Tell me about a time when you had to work with limited time or resources. 
+
 ### EARN TRUST:  
 * Tell me a time when you earned trust of a group. 
 * Would you tell on a employee for stealing? 
@@ -72,10 +81,12 @@
 * Talk to him, try to understand why, see if I can help, persuade him to return the stolen stuff and let him know it should not happens again 
 * Tell me about a time when you had to tell someone a harsh truth. 
 * What will you do if you see someone made a mistake 
+
 ### DIVE DEEP:  
 * Tell me about a time when you had to dive deep into the data and the results you achieved. 
 * Give me two examples of when you did more than what was required in any job experience. 
 * Tell me about something that you learnt recently in your role. 
+
 ### HAVE BACKBONE, DISAGREE AND COMMIT :  
 * Tell me about the most difficult interaction you had at work. 
 * Tell me about a time when you did not accept the status quo. 
@@ -89,6 +100,7 @@
 * How would you communicate with your manager 
 * Tell me about one bad/good thing your former manager would say about you 
 * What will you do if you face a tricky / troublesome manager 
+
 ### DELIVER RESULTS:  
 * Tell me about a time when you overcame an obstacle and delivered results. 
 * Tell me about a time when you set a goal and were able to achieve your goal. 
