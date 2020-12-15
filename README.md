@@ -27,4 +27,4 @@
 # License
 The theme is Copyright of Patrick Marsceill, licensed under [MIT license.](https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt)
 
-This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+Content on this site is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
