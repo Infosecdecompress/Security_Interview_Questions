@@ -1,6 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/Infosecdecompress/Security_Interview_Questions?label=License) ![GitHub last commit](https://img.shields.io/github/last-commit/Infosecdecompress/Security_Interview_Questions?label=Last%20Update)
 
-# Security Interview Questions
+# 資安面試問題
 這裡整理了一些在面試和準備美國資安相關職位時可能會問到的問題，希望能幫助其他想到踏入資安圈的人在找工作上更順利。  
 目前內容都是以英文/美國資安工作為主，歡迎大家幫忙翻譯或是補充台灣求職時可能會遇到的問題。  
 
