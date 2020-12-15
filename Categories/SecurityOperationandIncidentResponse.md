@@ -1,3 +1,5 @@
+# Security Operation / Incident Response
+
 ### You’ve identified an active c2 channel in your network. What do you do? 
 
 ### How do you stay up to date with the latest cyber security news? 

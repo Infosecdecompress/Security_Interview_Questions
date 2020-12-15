@@ -1,3 +1,5 @@
+## Security Mangement
+
 ### Vulnerability vs Risk 
 
 Vulnerability: A vulnerability is a weakness in a system or application that may be exploited to violate that specific system without any context to the impact involved. Vulnerability refers to the security flaws in or a computer or system that allow an attack to be successful. A successful compromise of a vulnerability may result in data manipulation, code execution, data loss etc. 

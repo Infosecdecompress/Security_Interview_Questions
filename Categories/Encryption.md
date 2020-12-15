@@ -1,3 +1,5 @@
+# Encryption
+
 ### Different between SSL \ TLS \ HTTPS 
 
 SSL:  standard technology for keeping an internet connection secure and safeguarding any sensitive data that is being sent between two systems, preventing criminals from reading and modifying any information transferred, including potential personal details. 

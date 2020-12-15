@@ -1,3 +1,5 @@
+# Basic Encryption and Authentication
+
 ### What is a three-way handshake? 
 
 ![3wayhandshake](../media/3wayhandshake.png)

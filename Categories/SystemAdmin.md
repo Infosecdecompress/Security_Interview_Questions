@@ -1,3 +1,5 @@
+# System Admin
+
 ### How do you change your DNS settings in Linux/Windows? 
 
 Windows: Internet adapter/ 
