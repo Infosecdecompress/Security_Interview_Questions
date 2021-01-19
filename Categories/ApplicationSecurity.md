@@ -75,3 +75,5 @@ Data exfiltration or Data extrusion is the unauthorized transfer of data from a 
 ### What is SOP (Same-origin policy)?
 
 ### What is CORS (Cross-origin resource sharing)?
+
+### What is SRI (Sub-Resource Integrity)?
