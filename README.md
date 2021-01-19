@@ -19,16 +19,16 @@
 # 目錄
 
 | Content                                                      |
-|:-------------------------------------------------------|
+| :----------------------------------------------------------- |
 | [Basic Encryption and Authentication](Categories/BasicEncryptionAndAuthentication.md) |
 | [Basic Network and Network Security](Categories/BasicNetworkAndNetworkSecurity.md) |
-| [Encryption](Categories/Encryption.md)                                  |
-| [Application Security](Categories/ApplicationSecurity.md)               |
-| [Risk Management ](Categories/RiskManagement.md)                        |
-| [Security Management](Categories/SecurityManagement.md)                 |
-| [Security Operation and Incident Response](Categories/SecurityOperationandIncidentResponse.md)                                                |
-| [System Admin](Categories/SystemAdmin.md)                               |
-| [Behavior Questions](Categories/BehaviorQuestion.md)                    |
+| [Cryptography](Categories/Cryptography.md)                   |
+| [Application Security](Categories/ApplicationSecurity.md)    |
+| [Risk Management ](Categories/RiskManagement.md)             |
+| [Security Management](Categories/SecurityManagement.md)      |
+| [Security Operation and Incident Response](Categories/SecurityOperationandIncidentResponse.md) |
+| [System Admin](Categories/SystemAdmin.md)                    |
+| [Behavior Questions](Categories/BehaviorQuestion.md)         |
 
 # License
 The theme is Copyright of Patrick Marsceill, licensed under [MIT license.](https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt)

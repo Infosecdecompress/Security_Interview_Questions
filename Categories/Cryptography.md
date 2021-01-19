@@ -14,6 +14,17 @@ HTTPS uses TCP at the transport layer. SSL is used for data encryption.
 
 Both,  initial exchange is done using asymmetric and that bulk data encryption requires speed and therefore symmetric algorithms. 
 
+### What is HTTP Strict Transport Security (HSTS)?
+
+HSTS is a header which allows a website to specify and enforce security policy in client web browsers. This policy enforcement protects secure websites from downgrade attacks, SSL stripping, and cookie hijacking. It allows a web server to declare a policy that browsers will only connect using secure HTTPS connections, and ensures end users do not “click through” critical security warnings. HSTS is an important security mechanism for high security websites. HSTS headers are only respected when served over HTTPS connections, not HTTP.
+
+HSTS generally has the following behavior in user web browsers:
+
+- Insecure HTTP links become secure HTTPS links
+- SSL certificate warnings or other errors show an error message and cannot be bypassed by the user
+
+More details: [Cloudflare Understanding HSTS (HTTP Strict Transport Security)](https://support.cloudflare.com/hc/en-us/articles/204183088-Understanding-HSTS-HTTP-Strict-Transport-Security-)
+
 ### If someone steals the server’s private key can they decrypt all previous content sent to that server? 
 
 ### What are some common ways that TLS is attacked, and/or what are some ways it’s been attacked in the past? 
