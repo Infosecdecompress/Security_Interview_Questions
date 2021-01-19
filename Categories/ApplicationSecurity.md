@@ -20,6 +20,10 @@ Reflected XSS: Reflected XSS involves the reflecting of a malicious script off o
 
 DOM-based XSS: an advanced type of XSS attack which is made possible when the web application’s client side scripts write user provided data to the Document Object Model (DOM). The data is subsequently read from the DOM by the web application and outputted to the browser. If the data is incorrectly handled, an attacker can inject a payload, which will be stored as part of the DOM and executed when the data is read back from the DOM. 
 
+### How would you hunt for XSS?
+
+#### Follow up: Give me an example of XSS and what you can do with it.
+
 ### Prevention on XSS 
 
 Input Validation and Output Sanitization, with focus on the latter. 
@@ -27,6 +31,10 @@ Input Validation and Output Sanitization, with focus on the latter.
 XSS can be prevented by the use of the proper available sanitizers. Web developers have to have an eye on the gateways through which they receive information and these are the gateways which must be made as a barrier for malicious files. 
 
 There are software or applications available for doing this, like the XSS Me for Firefox and DOM snitch for Google Chrome. Also, the default web application firewall formula, popularly 
+
+In addition, a strong CSP provides an additional layer of protection against XSS.
+
+### What is CSP (Content Security Policy) ?
 
 ### What is Cross-Site Request Forgery CSRF? 
 
@@ -39,6 +47,16 @@ When CSRF attacks, you can opt for two available methods.
 Firstly, with every request try to include a random token. In this way a unique string of tokens will be generated which is a good safeguard. 
 
 Secondly, for each field of form, try using different names. This will somewhat help you in becoming anonymous due to the entry of so many different names and thus will behave as a safeguard from CSRF attacks. 
+
+In addition, consider Same-Site Cookie for preventing CSRF attacks.
+
+### What is SSRF?
+
+### What is SQL Injection? Give me an example.
+
+#### Follow up:
+1. SQL Injection prevention
+2. What is blind SQL Injection?
 
 ### What’s the difference between HTTP and HTML? 
 
@@ -53,3 +71,7 @@ It doesn’t. Not natively. Good answers are things like “cookies”, but the 
 Infiltration is the method by which you enter or smuggle elements into a location. Exfiltration is just the opposite: getting sensitive information or objects out of a location without being discovered. In an environment with high security, this can be extremely difficult but not impossible. Again we turn to our friends in the fake delivery uniforms wandering around the building, and see that yes there are ways to get in and out without a lot of issues. 
 
 Data exfiltration or Data extrusion is the unauthorized transfer of data from a computer. The transfer of data can be manual by someone with physical access to the computer or automated, carried out through malware over a network. Because data routinely moves in and out of networked enterprises, data exfiltration can closely resemble normal network traffic, making detection of exfiltration attempts challenging for IT security groups. 
+
+### What is SOP (Same-origin policy)?
+
+### What is CORS (Cross-origin resource sharing)?

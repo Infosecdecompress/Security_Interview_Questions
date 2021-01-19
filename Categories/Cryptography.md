@@ -1,4 +1,4 @@
-# Encryption
+# Cryptography
 
 ### Different between SSL \ TLS \ HTTPS 
 
@@ -71,3 +71,5 @@ CBC (Cipher Block Chaining) uses an IV for the first block and then propagates t
 3. Biometrics: Someone user is 
 
 4. OTP: one time password 
+
+### Do you know HSM (hardware security module)?

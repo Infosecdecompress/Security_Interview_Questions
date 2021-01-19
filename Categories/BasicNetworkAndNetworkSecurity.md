@@ -40,6 +40,8 @@ TCP, TCP has to make connection
 
 CA (Certificate Authority), CRL(Certificate Revocation List), Online Certificate Status Protocol (OCSP) 
 
+### What is certificate pinning?
+
 ### Is ARP UDP or TCP? 
 
 Neither 
@@ -123,4 +125,6 @@ Thus, DNS monitoring is very important since you can easily visit a website with
 
 Authoritative name servers store DNS record information –usually a DNS hosting provider or domain registrar. 
 
-Recursive name servers are the “middlemen” between authoritative servers and end-users because they have to recuse up the DNS tree to reach the name servers authoritative for storing the domain’s records. 
+Recursive name servers are the “middlemen” between authoritative servers and end-users because they have to recuse up the DNS tree to reach the name servers authoritative for storing the domain’s records.
+
+### What is DNS spoofing (cache poisoning)? How does it work?
