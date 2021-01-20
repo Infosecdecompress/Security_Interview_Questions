@@ -26,7 +26,9 @@
 | [Application Security](Categories/ApplicationSecurity.md)    |
 | [Risk Management ](Categories/RiskManagement.md)             |
 | [Security Management](Categories/SecurityManagement.md)      |
-| [Security Operation and Incident Response](Categories/SecurityOperationandIncidentResponse.md) |
+| [Security Operation / Incident Response](Categories/SecurityOperationandIncidentResponse.md) |
+| [Penetration Testing](Categories/PenetrationTesting.md) |
+| [Threat Modeling](Categories/ThreatModeling.md) |
 | [System Admin](Categories/SystemAdmin.md)                    |
 | [Behavior Questions](Categories/BehaviorQuestion.md)         |
 
