@@ -4,7 +4,7 @@
 這裡整理了一些在面試和準備美國資安相關職位時可能會問到的問題，希望能幫助其他想到踏入資安圈的人在找工作上更順利。  
 目前內容都是以英文/美國資安工作為主，歡迎大家幫忙翻譯或是補充台灣求職時可能會遇到的問題。  
 I collected and organized some of the questions that might be asked during the interviews of security-related positions.
-Most of the content are in English and based on the experience I have in the US, it would be great if anyone can help to translate it into Mandarin and other languages or add contents.
+Most of the content is in English and based on the experience I have in the US, it would be great if anyone can help to translate it into Mandarin and other languages or add content.
 
 * 有想分享的面試問題、或補充答案，歡迎直接在對應主題裡建Pull Request
 * 分類、題目或答案有錯，歡迎建Issues
