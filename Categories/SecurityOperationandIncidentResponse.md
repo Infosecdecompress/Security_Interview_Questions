@@ -9,6 +9,7 @@
 ### Describe in as much detail as possible what happens when you type google into the address bar if your browser and hit enter 
 
 ![](https://pbs.twimg.com/media/EcmG_g4WoAI2rTv?format=jpg&name=large)
+Image by [@manekinekko](https://twitter.com/manekinekko/status/1281704000572858375)
 
 ### What are some common ways an attacker may move laterally throughout the network? ( stupid terms: move east/west in a network) 
 
