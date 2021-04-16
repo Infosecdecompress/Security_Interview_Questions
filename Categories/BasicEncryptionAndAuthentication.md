@@ -6,7 +6,7 @@
 
 ### How do cookies work?
 
-Data stored by the browser and sent to the server with every request. 
+Data stored by the browser and sent to the server with every request.  Client side.
 
 ### How do sessions work?
 
@@ -39,3 +39,29 @@ This is because of encrypting a data we obtain a stream of bits which are random
 The reason to why these random bits become incompressible is because of the lack of any patterned structure. 
 
 Compressing data always requires any specific pattern to be compressed which is lacked in random bits. 
+
+### Authentication Related
+
+#### Auth systems 
+
+SAMLv2o.
+
+OpenID.
+
+#### Biometrics
+
+Can't rotate unlike passwords.
+
+#### Password management
+
+Rotating passwords (and why this is bad). 
+
+Different password lockers. 
+
+#### U2F / FIDO
+
+Eg. Yubikeys.
+
+Helps prevent successful phishing of credentials.
+
+#### Compare and contrast multi-factor auth methods

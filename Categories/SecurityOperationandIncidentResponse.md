@@ -1,5 +1,170 @@
 # Security Operation / Incident Response
 
+### Detection
+
+A curated list of [awesome threat detection](https://github.com/0x4D31/awesome-threat-detection) resources
+
+#### Tools
+
+- IDS
+  - Intrusion Detection System (signature based (eg. snort) or behaviour based).
+  - Snort/Suricata rule writing
+  - Host-based Intrusion Detection System (eg. OSSEC)
+- SIEM
+  - System Information and Event Management.
+- Honey pots
+  - Canary tokens.
+  - Dummy internal service / web server, can check traffic, see what attacker tries.
+- Things that create signals
+  - Honeypots, snort.
+- Things that triage signals
+  - SIEM
+- Things that will alert a human 
+  - Automatic triage of collated logs, machine learning.
+  - Notifications and analyst fatigue.
+  - Systems that make it easy to decide if alert is actual hacks or not.
+- Examples
+  - Splunk.
+  - Arcsight.
+  - Qradar.
+  - Darktrace.
+  - Tcpdump.
+  - Wireshark.
+
+#### Anomaly / Behavior based detection 
+
+IDS learns model of “normal” behavior, then can detect things that deviate too far from normal - eg unusual URLs being accessed, user specific- login times / usual work hours, normal files accessed.  
+
+Can also look for things that a hacker might specifically do (eg, HISTFILE commands, accessing /proc).
+
+If someone is inside the network- If action could be suspicious, increase log verbosity for that user.
+
+#### Firewall rules
+
+- Brute force (trying to log in with a lot of failures).
+- Detecting port scanning (could look for TCP SYN packets with no following SYN ACK/ half connections).
+- Antivirus software notifications.
+- Large amounts of upload traffic.
+
+#### Logs to look at
+
+- DNS queries to suspicious domains.
+- HTTP headers could contain wonky information.
+- Metadata of files (eg. author of file) (more forensics?).
+- Traffic volume.
+- Traffic patterns.
+- Execution logs.
+
+#### Things to know about attackers
+
+- Slow attacks are harder to detect.
+- Attacker can spoof packets that look like other types of attacks, deliberately create a lot of noise.
+- Attacker can spoof IP address sending packets, but can check TTL of packets and TTL of reverse lookup to find spoofed addresses.
+- Correlating IPs with physical location (is difficult and inaccurate often).
+
+### Indicator of Compromise (IOC)? 
+
+Indicator of compromise (often shared amongst orgs/groups).
+
+#### How do you use IoC to help you in an investigation?
+
+### Signatures
+
+Host-based signatures
+
+* Eg changes to the registry, files created or modified.
+
+* Strings in found in malware samples appearing in binaries installed on hosts (/Antivirus).
+
+Network signatures
+
+* Eg checking DNS records for attempts to contact C2 (command and control) servers. 
+
+### OSINT
+
+#### What is OSINT? 
+
+#### How do you use it? 
+
+#### Any tools you will use to help you? 
+
+- dig 
+- Censys 
+- Shodan 
+- Whois 
+
+### Incident Management
+
+- Privacy incidents vs information security incidents
+- Know when to talk to legal, users, managers, directors.
+- Run a scenario from A to Z, how would you ...
+
+- Good practices for running incidents 
+  - How to delegate.
+  - Who does what role.
+  - How is communication managed + methods of communication.
+  - When to stop an attack.
+  - Understand risk of alerting attacker.
+  - Ways an attacker may clean up / hide their attack.
+  - When / how to inform upper management (manage expectations).
+  - Metrics to assign Priorities (e.g. what needs to happen until you increase the prior for a case)
+    - Use playbooks if available
+
+- Important things to know and understand
+  - Type of alerts, how these are triggered.
+  - Finding the root cause.
+  - Understand stages of an attack (e.g. cyber-kill chain)
+  - Symptom vs Cause.
+  - First principles vs in depth systems knowledge (why both are good).
+  - Building timeline of events.
+  - Understand why you should assume good intent, and how to work with people rather than against them.
+    - Prevent future incidents with the same root cause
+  - Response models
+    - SANS' PICERL (Preparation, Identification, Containment, Eradication, Recovery, Lessons learned)
+    - Google's IMAG (Incident Management At Google)
+
+### Digital Forensics
+
+ - Evidence volatility (network vs memory vs disk)
+
+ - Network forensics
+   - DNS logs / passive DNS
+   - Netflow
+   - Sampling rate
+
+ - Disk forensics
+   - Disk imaging
+   - Filesystems (NTFS / ext2/3/4 / AFPS)
+   - Logs (Windows event logs, Unix system logs, application logs)
+   - Data recovery (carving)
+   - Tools
+   - plaso / log2timeline
+   - FTK imager
+   - encase
+
+ - Memory forensics
+   - Memory acquisition (footprint, smear, hiberfiles)
+   - Virtual vs physical memory
+   - Life of an executable
+   - Memory structures
+   - Kernel space vs user space
+   - Tools
+   - Volatility
+   - Google Rapid Response (GRR) / Rekall
+   - WinDbg
+
+  - Mobile forensics
+    - Jailbreaking devices, implications
+    - Differences between mobile and computer forensics
+    - Android vs. iPhone
+
+  - Anti forensics
+    - How does malware try to hide?
+    - Timestomping
+
+  - Chain of custody
+   - Handover notes 
+
 ### You’ve identified an active c2 channel in your network. What do you do? 
 
 ### How do you stay up to date with the latest cyber security news? 
@@ -145,32 +310,6 @@ Example:
 - What resources will you need? 
   - I will need all the logs with timestamps of the systems and devices that are related to the incident, I might also need a help from engineers of the system who have better understand about the system and how incident like that might happens. 
 
-### What is IaaS?  
-
-A IaaS, or Infrastructure as a Service, is one of the cloud service that the providers provide the server, storage and networking, the customers will take care of the OS and everything above that 
-
-### How much do you know about AWS IaaS? 
-
-I do have experience setting up AWS ECS and manage it, therefore I know how to set them up and how it works. 
-
-### How do you get the logs from AWS IaaS? 
-
-AWS do have a service called CloudWatch that will handle the logs and information from different AWS EC2 and other service, where you can view and manage the logs. 
-
-If you want to see logs and console output for a single instance, it can be found in the Amazon EC2 console  
-
-### What logs can you get from AWS IaaS logs? 
-
-You will be able to get system logs, console output 
-
-### What is IaaS vs PaaS vs SaaS? 
-
-In IaaS, provider handles networking, virtual machines, storage. Client has the most flexibility but have to manage many things 
-
-In PaaS, provider handles what's handled in IaaS and also OS, runtime and some of the software maintenance. 
-
-In SaaS, provider handles everything, client can use the product directly without handling or maintaining anything. 
-
 ### How do you conduct an in-depth vulnerability assessments and information system auditing of assets (e.g. servers, Workstations, Network Appliances, Storage Devices, and Applications)? 
 
 - What is the methodology?
@@ -208,16 +347,3 @@ In SaaS, provider handles everything, client can use the product directly withou
     - How to recreate the issue (include all the steps)
       - If you cannot recreate it, it's not an issue
     - Actual risk / actual impact
-
-### Have you heard of Indicator of Compromise (IOC)? 
-
-### How do you use IoC to help you in an investigation? 
-
-### Will you use OSINT?  
-
-### What is OSINT? How do you use it? Any tools you will use to help you? 
-
-- dig 
-- Censys 
-- Shodan 
-- Whois 

@@ -1,5 +1,21 @@
 # Threat Modeling
 
+### How does threat modeling work? 
+
+Identify 
+
+* Potential threat 
+
+* Potential occurrence 
+
+* Concern Priority 
+
+* Means to eradicate or mitigate threat 
+
+Categorized 
+
+Analyze 
+
 ### What is STRIDE?
 
 - Spoofing : using someone else's credentials to gain access to otherwise inaccessible assets
@@ -11,7 +27,7 @@
 
 ### What is DREAD?
 
-### Threat Modeling excersise examples
+### Threat Modeling exercise examples
 1. Instant messaging system
 2. Password storage system
 3. Ecommerce store
