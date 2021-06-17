@@ -1,4 +1,4 @@
-### Coding & algorithms
+# Security Related Coding & algorithms
 
 - The basics
   - Conditions (if, else).
@@ -40,7 +40,7 @@
   - Pros and cons of Python vs C, Java, etc.
   - Understand common functions very well, be comfortable in the language.
 
-### Security themed coding challenges
+## Security themed coding challenges
 
 - Cyphers / encryption algorithms 
   - Be able to implement basic cyphers.
