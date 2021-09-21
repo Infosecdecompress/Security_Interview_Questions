@@ -12,6 +12,18 @@ Threat: A threat is what we’re trying to protect against. A potential danger t
 
 Exploit: The exploit is something that takes advantage of vulnerability in an asset to generate unintended or unexpected behavior in the target system, which would enable an attacker to get access to data or information. 
 
+### How do you measure and quantify risk?
+
+### How do you determine the risk appetite for the organization?
+
+### When is it appropriate to respond to a business unit with a “no” when they ask permission?
+
+### When is it appropriate to respond to a business unit with a “no” when they ask permission?
+
+### What are the top 2 items on the OWASP top 10 that our org should be concerned about, in terms of financial risk? What would you suggest we implement to reduce our risk?
+
+### What will your 30-60-90 day plan when you get onboard?
+
 ### What is Open Source Software?
 
 Open source software is software with source code that anyone can inspect, modify, and enhance. Programmers who have access to a computer program’s source code can improve that program by adding features to it or fixing parts that don’t always work correctly. 
