@@ -1,0 +1,94 @@
+site_name: 資安面試問題 · Security Interview Questions
+site_description: A curated collection of security interview questions and answers.
+site_url: https://jobs.infosecdecompress.com
+repo_url: https://github.com/Infosecdecompress/Security_Interview_Questions
+repo_name: Infosecdecompress/Security_Interview_Questions
+edit_uri: edit/master/docs/
+copyright: Content licensed under CC BY-SA 4.0
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/icon_circle_small.png
+  favicon: assets/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Noto Sans
+    code: Roboto Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+
+nav:
+  - Home: index.md
+  - Application Security: application-security.md
+  - Encryption & Authentication: encryption-authentication.md
+  - Network & Network Security: network-security.md
+  - Cryptography: cryptography.md
+  - Security & Risk Management: risk-management.md
+  - Security Ops & Incident Response: secops-incident-response.md
+  - Penetration Testing: penetration-testing.md
+  - Threat Modeling: threat-modeling.md
+  - System Admin: system-admin.md
+  - Security-Related Coding: security-coding.md
+  - Behavioral Questions: behavioral.md
+  - Interview & Study Tips: interview-tips.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  analytics:
+    provider: google
+    property: G-BB0DHLTDNJ
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Infosecdecompress/Security_Interview_Questions
+    - icon: fontawesome/solid/globe
+      link: https://infosecdecompress.com

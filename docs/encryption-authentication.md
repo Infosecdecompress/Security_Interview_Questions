@@ -4,7 +4,7 @@
 
 The TCP connection-setup exchange: the client sends `SYN`, the server replies `SYN-ACK`, and the client answers `ACK`. This synchronizes sequence numbers and confirms both sides can send and receive before any data flows.
 
-![3wayhandshake](../media/3wayhandshake.png)
+![3wayhandshake](assets/images/3wayhandshake.png)
 
 ### How do cookies work?
 
@@ -18,7 +18,7 @@ Collection of data stored on the server and associated with a given user (usuall
 
 The negotiation that sets up a TLS session: client and server agree on the protocol version and cipher suite, the server presents its certificate (proving identity), they establish a shared symmetric session key (via RSA key transport or, preferably, ephemeral Diffie-Hellman for forward secrecy), and then switch to fast symmetric encryption for the actual data.
 
-![SSLhandshake](../media/SSLhandshake.jpg)
+![SSLhandshake](assets/images/SSLhandshake.jpg)
 
 ### How does HMAC work? 
 
@@ -30,7 +30,7 @@ The nested, two-pass construction (hash with the inner key, then hash that resul
 
 ### What’s the difference between Diffie-Hellman and RSA? 
 
-RSA is a protocol which is used for signing or encryption, except that you have all the key materials with you beforehand 
+RSA is a protocol which is used for signing or encryption, except that you have all the key materials with you beforehand 
 
 Diffie-Hellman is a protocol which is used for exchange of key.
 
@@ -38,7 +38,7 @@ Diffie-Hellman is a protocol which is used for exchange of key.
 
 A ticket-based authentication protocol built around a trusted Key Distribution Center (KDC). The client authenticates once to the Authentication Server and receives a Ticket-Granting Ticket (TGT); to reach a service it presents the TGT to the Ticket-Granting Server and gets a service ticket, which it hands to the target service. Passwords are never sent over the wire, and tickets are timestamped to limit replay — which is why Kerberos is sensitive to clock skew between hosts.
 
-![Kerberos](../media/kerberos.png)
+![Kerberos](assets/images/kerberos.png)
 
 ### If you're going to compress and encrypt a file, which do you do first and why? 
 

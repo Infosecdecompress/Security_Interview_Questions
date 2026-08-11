@@ -242,7 +242,7 @@ Can verify certificates against public logs
 
 Bearer tokens, this can be stolen and used, just like cookies.
 
-![SSO](../media/SSO.png)
+![SSO](assets/images/SSO.png)
 
 ### NAT 
 

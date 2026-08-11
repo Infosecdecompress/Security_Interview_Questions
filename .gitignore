@@ -1,2 +1,7 @@
 
 .DS_Store
+
+# MkDocs build output & cache
+site/
+.cache/
+__pycache__/
