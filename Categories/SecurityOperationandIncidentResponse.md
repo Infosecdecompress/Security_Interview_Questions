@@ -68,6 +68,8 @@ Indicator of compromise (often shared amongst orgs/groups).
 
 #### How do you use IoC to help you in an investigation?
 
+IoCs (indicators of compromise) — file hashes, malicious IPs/domains, URLs, registry keys, mutexes, filenames — are used to detect and scope an incident. You sweep logs, EDR, and network data for matches to confirm a compromise, identify which hosts are affected, and build the timeline; the same indicators feed detection rules (SIEM/IDS) to catch recurrence. IoCs are often shared between organizations (e.g. via threat feeds/STIX) so others can hunt for the same activity.
+
 ### Signatures
 
 Host-based signatures
@@ -84,7 +86,11 @@ Network signatures
 
 #### What is OSINT? 
 
+Open-Source Intelligence — collecting and analyzing information from publicly available sources (search engines, WHOIS/DNS, certificate transparency logs, social media, code repositories, leaked-credential dumps, Shodan/Censys) to build a picture of a target without touching its systems directly.
+
 #### How do you use it? 
+
+In recon, to map an organization's footprint before active testing — enumerating domains/subdomains, IP ranges, employee names and emails (for phishing), technologies in use, exposed services and files, and leaked credentials. Defensively, the same techniques reveal what an attacker can already see about you, so you can reduce that exposure.
 
 #### Any tools you will use to help you? 
 
@@ -167,6 +173,8 @@ Network signatures
 
 ### You’ve identified an active c2 channel in your network. What do you do? 
 
+Follow incident response, and don't tip off the attacker prematurely. Scope it first — identify affected hosts, the C2 domain/IP, and how it got in — while capturing volatile evidence (memory, network captures) for forensics. Then contain (isolate affected hosts, block the C2 at the firewall/DNS/proxy), eradicate (remove malware, close the initial vector, rotate compromised credentials), and recover (restore clean systems and verify). Finish with a post-mortem and new detections. Time the containment deliberately, since cutting C2 too early can alert the attacker to escalate or destroy evidence.
+
 ### How do you stay up to date with the latest cyber security news? 
 
 ### Tell me about some recent vulnerabilities and why they caught your attention in the last six months. 
@@ -177,6 +185,8 @@ Network signatures
 Image by [@manekinekko](https://twitter.com/manekinekko/status/1281704000572858375)
 
 ### What are some common ways an attacker may move laterally throughout the network? ( stupid terms: move east/west in a network) 
+
+Credential reuse/theft (dumped hashes, pass-the-hash / pass-the-ticket, cached creds), remote-access protocols (RDP, SSH, SMB/PsExec, WMI, WinRM), exploiting internal service vulnerabilities, abusing Active Directory (Kerberoasting, token/ticket theft), and pivoting through already-compromised hosts. Detection relies on spotting unusual internal authentication and east-west traffic patterns.
 
 ### Are you familiar with ATT&CK? Tell me a little bit about it. 
 
@@ -192,6 +202,8 @@ An event will be anything that happens related to cybersecurity, incident, will 
 
 ### How do you use Python to write log parsers and/or utilities in scripting languages? 
 
+Read the logs, extract fields with string operations or regular expressions (the `re` module), and normalize them into structured records (dicts, or `csv`/`json` output) for filtering, counting, and correlation. Typical building blocks: iterate lines, `re.search`/`re.findall` for patterns (IPs, timestamps, status codes), `collections.Counter`/`defaultdict` for aggregation, and `datetime` for building timelines. For large files, stream line-by-line rather than loading everything into memory, and feed results into a SIEM or alerting logic.
+
 ### What is DevOps? Why is it useful?  
 
 DevOps is a methodology that combines the software development part and the technology operation part. It makes software delivering, fixing bugs and providing updates easier and faster for both developer and operator.  
@@ -200,9 +212,15 @@ DevOps is a methodology that combines the software development part and the tech
 
 ### What is Jenkins? Why use it? When do you use it? How do you use it? How is it helping the company? 
 
+Jenkins is an open-source automation server used mainly for CI/CD. It watches source control and automatically builds, tests, and deploys code through configurable pipelines. Teams use it to catch integration problems early, standardize and speed up releases, and remove manual deployment steps. From a security angle it's also where you wire in automated scanning (SAST/DAST/dependency checks) — and, because it often holds credentials and can deploy to production, it is itself a high-value asset to secure.
+
 ### What is Ansible? Why use it? When do you use it? How do you use it? How is it helping the company? 
 
+Ansible is an open-source configuration-management and automation tool. Using declarative YAML "playbooks," it configures servers, installs software, and orchestrates deployments over SSH with no agent required on the targets. It's used for consistent, repeatable, idempotent infrastructure changes at scale — including security hardening and patch rollouts applied uniformly across many hosts.
+
 ### How do you automate tasks? 
+
+Identify repetitive, well-defined work, script it (Python/Bash/PowerShell), and trigger it on a schedule (cron) or by event (webhooks, CI pipelines, SOAR playbooks). In security operations, common examples are log parsing and alerting, enrichment and triage of indicators, scheduled scans, and configuration management with tools like Ansible — always with logging and error handling so the automation stays auditable.
 
 ### What is an investigation methodology?  
 

@@ -55,6 +55,8 @@ More details: [Cloudflare Understanding HSTS (HTTP Strict Transport Security)](h
 
 #### If someone steals the server’s private key can they decrypt all previous content sent to that server? 
 
+It depends on the key exchange. With static RSA key exchange (no forward secrecy), yes — anyone who recorded past traffic can use the stolen private key to recover each session key and decrypt it retroactively. With ephemeral Diffie-Hellman (DHE/ECDHE, i.e. Perfect Forward Secrecy), no — the session keys are ephemeral and never transmitted, so a stolen long-term key cannot decrypt previously captured sessions (though it does let the attacker impersonate the server or run an active MITM going forward).
+
 #### What are some common ways that TLS is attacked, and/or what are some ways it’s been attacked in the past? 
 
 weak ciphers, vulnerabilities like Heartbleed, BEAST, 
@@ -82,6 +84,8 @@ MITM
 [Various attack models (e.g. chosen-plaintext attack)](https://en.wikipedia.org/wiki/Attack_model).
 
 ### What is an IV used for in encryption? 
+
+An Initialization Vector is a non-secret but random/unique value fed into a cipher so that encrypting the same plaintext under the same key produces different ciphertext each time, preventing patterns from leaking. In CBC it is XORed with the first plaintext block and must be unpredictable; in CTR/GCM it forms the nonce/counter and must never be reused for a given key (nonce reuse in GCM is catastrophic and can leak the authentication key). The IV is normally sent in the clear alongside the ciphertext.
 
 ### Cipher Modes
 

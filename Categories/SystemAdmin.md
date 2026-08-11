@@ -28,6 +28,10 @@
 
 #### What are Linux’s strengths and weaknesses vs. Windows? 
 
+**Linux strengths:** open source and auditable, granular permissions with strong CLI/automation, lightweight, dominant on servers, fast patching, and a smaller desktop-malware target. **Weaknesses:** fragmentation across distros, steeper learning curve, less commercial desktop/app support, and configuration that assumes more expertise.
+
+**Windows strengths:** ubiquitous on desktops, strong enterprise management (Active Directory, Group Policy), broad software/driver and vendor support, and a familiar GUI. **Weaknesses:** larger attack surface and malware target, closed source, licensing cost, and historically more privilege/registry-related exposure.
+
 ### How do you change your DNS settings in Linux/Windows? 
 
 Windows: Internet adapter/ 
@@ -45,6 +49,8 @@ Cyber Crime: illegal action involving network or computer where it used to commi
 Protect CIA (Confidentiality, Integrity, Availability)
 
 ### What are the consequences of a cyber-attack? 
+
+Financial loss (fraud, downtime, remediation, ransom), breach of customer data / IP / PII, operational disruption, reputational damage and lost customer trust, legal and regulatory penalties (e.g. GDPR/HIPAA fines), and — in critical-infrastructure or safety systems — potential physical harm.
 
 ### Infrastructure (Prod / Cloud) Virtualization 
 
@@ -88,7 +94,11 @@ Compliance: The system needs to be checked almost every day for better results a
 
 ### Privilege escalation techniques, and prevention.
 
+**Techniques:** exploiting kernel/service vulnerabilities, abusing misconfigurations (writable SUID binaries, weak `sudo` rules, world-writable files/services, unquoted service paths on Windows), stealing and reusing credentials or tokens, and DLL hijacking. **Prevention:** least privilege, timely patching, removing unnecessary SUID/admin rights, hardening service and file permissions, application whitelisting, and monitoring for anomalous privilege use.
+
 ### Remote Code Execution / getting shells.
+
+RCE is the ability to run attacker-supplied code on a target, usually the highest-impact outcome. Attackers commonly turn it into an interactive shell: a *bind shell* opens a listening port on the victim for the attacker to connect to, while a *reverse shell* has the victim connect back out to the attacker's listener (favored because outbound connections more often bypass firewalls/NAT).
 
 ### Local databases
 

@@ -114,6 +114,8 @@ Recursive name servers are the “middlemen” between authoritative servers and
 
 #### What is DNS spoofing (cache poisoning)? How does it work?
 
+An attacker gets a DNS resolver to cache a forged record so a domain resolves to an attacker-controlled IP. Because classic DNS runs over UDP with no authentication, an attacker who can guess or observe the query's transaction ID and source port — or simply win the race against the real answer — can send a forged response that the resolver accepts and caches. Every user of that resolver is then redirected until the record's TTL expires. Mitigations: DNSSEC (cryptographically signed records), randomized source ports and transaction IDs, and 0x20-bit query encoding.
+
 ### What is a subnet and how is it useful in security? 
 
 You can control the flow of traffic using ACLs, QoS, or route-maps, enabling you to identify threats, close points of entry, and target your responses more easily. 
@@ -131,6 +133,8 @@ Rules to prevent incoming and outgoing connections.
 A firewall is a device or service that acts as a gate keeper, deciding what enters and exits the network. It analyzes the traffic it sees passing through it by checking the packet headers and data. Based on its configuration, the firewall then decides accordingly whether to deny or allow traffic to pass through. 
 
 #### Do you prefer filtered ports or closed ports on your firewall? Why?
+
+Filtered (silently dropped, no reply) is generally preferred over closed (which sends a TCP RST or ICMP unreachable). A closed port still answers, confirming the host is up and the port reachable; a filtered port returns nothing, so a scanner learns less and must wait for timeouts, slowing reconnaissance. The trade-off is that dropping everything can complicate legitimate network troubleshooting.
 
 #### IPS vs Firewall 
 
@@ -220,11 +224,15 @@ Look at DigiNotar.
 
 ### What info do certs contain, how are they signed? 
 
+An X.509 certificate contains the subject (CN and Subject Alternative Names), the subject's public key, the issuer, a validity period (not-before/not-after), a serial number, key-usage/extended-key-usage constraints, and the issuing CA's signature. Signing: the CA hashes the certificate's to-be-signed contents and signs that hash with the CA's private key. A client verifies by re-hashing the same contents and checking the signature with the CA's public key, chaining up through any intermediates to a root CA already trusted in its root store.
+
 #### How do web certificates for HTTPS work? 
 
 CA (Certificate Authority), CRL(Certificate Revocation List), Online Certificate Status Protocol (OCSP) 
 
 #### What is certificate pinning?
+
+The client hard-codes ("pins") the exact certificate or public key (often as a hash) it expects from a server and rejects any other, even one validly issued by a trusted CA. This defends against a rogue or compromised CA issuing a fraudulent certificate for the domain, and is common in mobile apps. The downside is operational: if the pinned key rotates without a client update, connections break — which is why HTTP-header pinning (HPKP) was deprecated.
 
 #### What is Certificate transparency ?
 
@@ -288,6 +296,12 @@ Checksum
 
 ### Broadcast domains and collision domains. 
 
+A collision domain is a network segment where simultaneous transmissions can collide (as on old shared hubs); a switch places each port in its own collision domain. A broadcast domain is the set of devices that receive one another's broadcast frames; a router (or a separate VLAN) bounds a broadcast domain. In short: switches break up collision domains, routers/VLANs break up broadcast domains.
+
 ### Root stores
 
+The set of trusted root CA certificates shipped with an OS or browser. A TLS certificate is trusted only if its chain terminates at a root in this store. Whoever controls the root store controls trust decisions, so additions and removals (e.g. distrusting a misbehaving CA) are security-critical.
+
 ### CAM table overflow
+
+An attack on a switch's CAM (MAC-address) table: the attacker floods the switch with frames using many bogus source MAC addresses until the finite table fills. The switch then fails open, flooding subsequent frames out every port like a hub, letting the attacker sniff traffic. Mitigated by port security (limiting the number of MACs learned per port).

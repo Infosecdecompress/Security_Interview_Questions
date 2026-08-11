@@ -27,6 +27,15 @@ Analyze
 
 ### What is DREAD?
 
+A risk-rating scheme that scores each threat (historically 1-10) across five factors and averages them to prioritize:
+- **Damage** - how bad the impact is if exploited
+- **Reproducibility** - how reliably it can be reproduced
+- **Exploitability** - the effort/skill needed to exploit it
+- **Affected users** - how many users are impacted
+- **Discoverability** - how easily the flaw is found
+
+Microsoft originally paired DREAD with STRIDE but later deprecated it because the scores are subjective and hard to keep consistent.
+
 ### Threat Modeling exercise examples
 1. Instant messaging system
 2. Password storage system

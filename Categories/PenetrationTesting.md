@@ -28,6 +28,8 @@
 
 ### Exploit Kits and drive-by download attacks
 
+An exploit kit is a toolkit hosted on a malicious or compromised site that automatically fingerprints a visitor's browser and plugins and launches matching exploits. A drive-by download is the result: malware installed simply by visiting the page, with no click required, by exploiting an unpatched vulnerability. Defenses: patching, disabling unneeded plugins, and browser sandboxing.
+
 ### Remote Control
 
 Remote code execution and privilege.
@@ -67,6 +69,8 @@ https://attack.mitre.org/
 ### Pentest Experience Questions
 
 #### How would you start a new pen test?
+
+Begin with scoping and authorization: define targets, rules of engagement, and timing, and get written permission. Then follow the standard phases — reconnaissance (OSINT, passive/active), scanning and enumeration (Nmap, service/version discovery), vulnerability identification, exploitation to prove impact, post-exploitation/pivoting as scope allows, and finally reporting with reproducible steps and remediation. Confirm up front whether it is black/grey/white box, whether the systems are production or test, and whether a backup exists before you touch anything.
 
 #### What is your your all-time favorite bug that you found?
 

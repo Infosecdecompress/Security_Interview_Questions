@@ -14,11 +14,19 @@ Exploit: The exploit is something that takes advantage of vulnerability in an as
 
 ### How do you measure and quantify risk?
 
+Conceptually, Risk = Likelihood x Impact. Quantitatively (especially for assets) you can use Single Loss Expectancy (SLE = Asset Value x Exposure Factor) and Annualized Loss Expectancy (ALE = SLE x Annual Rate of Occurrence) to express risk in dollars and weigh it against the cost of controls. Qualitatively, you rate likelihood and impact on a scale and plot them on a risk matrix (low/medium/high). Frameworks like FAIR give a more rigorous quantitative model, and vulnerability severity often feeds in via CVSS.
+
 ### How do you determine the risk appetite for the organization?
+
+Risk appetite is a business decision set by leadership, not by the security team alone. It's derived from the organization's objectives, regulatory and legal obligations, industry, financial capacity to absorb loss, and stakeholder expectations. In practice you work with executives and risk owners to define how much risk is acceptable per category, document it (often as thresholds tied to the risk matrix or ALE), and use it to decide what to mitigate, accept, transfer, or avoid.
 
 ### What is the primary reason most companies haven’t fixed their vulnerabilities? 
 
+Usually not ignorance of the flaw but prioritization and resources — competing business priorities, limited staff and budget, fear of breaking production or causing downtime, patch/change-management overhead, and legacy or third-party systems that are hard to update. The risk is often accepted or deferred rather than remediated.
+
 ### What’s the goal of information security within an organization? 
+
+To protect the confidentiality, integrity, and availability (the CIA triad) of the organization's information and systems — enabling the business to operate and meet its objectives while keeping risk at an acceptable level. It is a business enabler, not just a set of controls.
 
 ### If you were to start a job as head engineer or CSO at a Fortune 500 company due to the previous guy being fired for incompetence, what would your priorities be? 
 
@@ -44,9 +52,15 @@ Therefore we should be applying defense-in-depth based on threat modeling in add
 
 ### When is it appropriate to respond to a business unit with a “no” when they ask permission?
 
+Rarely a flat "no." A good answer reframes it: understand what the business is trying to achieve, explain the risk in business terms, and offer a safer way to reach the goal. A hard "no" is warranted only when the request would create unacceptable risk with no viable mitigation — e.g. a clear legal/regulatory violation or exposure that plainly outweighs the business value — and even then it should come with the reasoning and an alternative.
+
 ### What are the top 2 items on the OWASP top 10 that our org should be concerned about, in terms of financial risk? What would you suggest we implement to reduce our risk?
 
+This is meant to prompt discussion, but strong answers point to injection (e.g. SQL injection) and broken access control / broken authentication — flaws that lead directly to data breaches and account or data compromise, and therefore the largest direct financial and regulatory exposure. Mitigations: parameterized queries and input validation for injection; enforced server-side authorization, least privilege, and strong session/authentication controls (including MFA) for access control.
+
 ### What will your 30-60-90 day plan when you get onboard?
+
+A framework rather than a fixed answer. **First 30 days (learn):** understand the business, its assets and crown jewels, existing controls, the team, and current risks; listen and build relationships. **60 days (plan):** identify gaps, quick wins, and priorities, and draft a roadmap aligned to business risk. **90 days (execute):** start delivering on the prioritized improvements, establish metrics, and show measurable progress.
 
 ### What is Open Source Software?
 
@@ -67,6 +81,8 @@ You should hear coverage of many testers vs. one, incentivization, focus on rare
 Here we’re looking for them to ask us questions in return, such as, “What kind of team?” Answers that are bad include anything purely number-based like number of IDS events, or widget-thingies detected.  
 
 ### Who’s more dangerous to an organization, insiders or outsiders? 
+
+The strong answer is that insiders are often more dangerous per incident: they already have legitimate access, know where valuable data lives, and can bypass perimeter controls, which makes them harder to detect — whether malicious or simply negligent. Outsiders are far more numerous and constant, though. The point is to defend against both with layered controls, least privilege, monitoring, and not assuming that trust equals safety.
 
 ### Vulnerability Assessment vs Penetration Testing 
 
