@@ -25,11 +25,11 @@
   - For space and time.
 
 - Regular expressions
-  - O(n), but O(n!) when matching.
+  - Typically O(n) to match, but backtracking engines can hit exponential O(2^n) worst case (catastrophic backtracking).
   - It's useful to be familiar with basic regex syntax, too.
 
 - Recursion 
-  - And why it is rarely used.
+  - And when to prefer iteration instead (stack depth / performance).
 
 - Python
   - List comprehensions and generators [ x for x in range() ].

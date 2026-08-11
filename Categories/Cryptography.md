@@ -24,7 +24,7 @@ Asymmetrical
 - [ECC (namely ed25519) (asymmetric)](https://en.wikipedia.org/wiki/EdDSA)
 - Diffie Hellman
 - El Gamal
-- DSAC 
+- DSA 
 
 ### SSL & TLS
 
@@ -99,7 +99,7 @@ ECB (Electronic Code Book) and CBC (Cipher Block Chaining).
 
 #### What’s the main difference in security between ECB and CBC? 
 
-ECB (Electronic Code Book) just does a one-to-one lookup for encryption, without using an IV, which makes it fairly easy to attack using a chosen-plaintext attack. 
+ECB (Electronic Code Book) encrypts each block independently, without using an IV, so identical plaintext blocks always produce identical ciphertext blocks. This leaks patterns in the data (the classic "ECB penguin" image) and makes it fairly easy to attack. 
 
 CBC (Cipher Block Chaining) uses an IV for the first block and then propagates the XOR of the previous block onto subsequent ones. The difference in results can be remarkable. 
 

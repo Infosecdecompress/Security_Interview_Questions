@@ -16,13 +16,13 @@ account lockouts, IP restrictions, fail2ban, commercial versions thereof, etc.
 
 **Stored XSS:** also known as persistent XSS, is the more damaging of the two. It occurs when a malicious script is injected directly into a vulnerable web application. Stored Cross-site scripting vulnerabilities happens when the payload is saved, for example in a database and then is executed when a user opens the page. Stored cross-site scripting is very dangerous for a number of reasons: 
 
-**Reflected XSS:** Reflected XSS involves the reflecting of a malicious script off of a web application, onto a user’s browser. The script is embedded into a link, and is only activated once that link is clicked on. A reflected XSS vulnerability happens when the user input from a URL or POST data is reflected on the page without being stored. This means that an attacker has to send a crafted link or post form to the victim to insert the payload, and the victim should click the link. This kind of payload is also generally being caught by built in browser XSS filters, like in Chrome, Internet Explorer or Edge. 
+**Reflected XSS:** Reflected XSS involves the reflecting of a malicious script off of a web application, onto a user’s browser. The script is embedded into a link, and is only activated once that link is clicked on. A reflected XSS vulnerability happens when the user input from a URL or POST data is reflected on the page without being stored. This means that an attacker has to send a crafted link or post form to the victim to insert the payload, and the victim should click the link. Historically this kind of payload was sometimes caught by built-in browser XSS filters (e.g. Chrome's XSS Auditor, IE's XSS Filter), but these have since been removed/deprecated (Chrome removed the XSS Auditor in 2019), so they should not be relied on for protection. 
 
 **DOM-based XSS:** an advanced type of XSS attack which is made possible when the web application’s client side scripts write user provided data to the Document Object Model (DOM). The data is subsequently read from the DOM by the web application and outputted to the browser. If the data is incorrectly handled, an attacker can inject a payload, which will be stored as part of the DOM and executed when the data is read back from the DOM. 
 
 
 
-`<img scr=””>` will often load content from other websites, making a cross-origin HTTP request. 
+`<img src=””>` will often load content from other websites, making a cross-origin HTTP request. 
 
 ### How would you hunt for XSS?
 
@@ -108,7 +108,7 @@ Data exfiltration or Data extrusion is the unauthorized transfer of data from a 
 
 ### What is SOP (Same-origin policy)?
 
-Only accept requests from the same origin domain. 
+A browser security mechanism that restricts how a document or script loaded from one origin can interact with a resource from another origin. It does not stop cross-origin requests from being sent (that's why CSRF exists); it stops a script from reading the response or accessing the DOM/cookies of a different origin. An origin is the combination of scheme, host, and port. 
 
 ### What is CORS (Cross-origin resource sharing)?
 

@@ -22,7 +22,7 @@ Collection of data stored on the server and associated with a given user (usuall
 
 ### What’s the difference between Diffie-Hellman and RSA? 
 
-RSA is a protocol which is used for signing or encryption, expect that you have all the key materials with you beforehand 
+RSA is a protocol which is used for signing or encryption, except that you have all the key materials with you beforehand 
 
 ### Diffie-Hellman is a protocol which is used for exchange of key. 
 
@@ -44,7 +44,7 @@ Compressing data always requires any specific pattern to be compressed which is 
 
 #### Auth systems 
 
-SAMLv2o.
+SAML 2.0.
 
 OpenID.
 

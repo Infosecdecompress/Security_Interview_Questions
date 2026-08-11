@@ -18,7 +18,7 @@
 - /proc
 - /tmp - code can be saved here and executed.
 - /shadow 
-- LDAP - Lightweight Directory Browsing Protocol. Lets users have one password for many services. This is similar to Active Directory in windows.
+- LDAP - Lightweight Directory Access Protocol. Lets users have one password for many services. This is similar to Active Directory in windows.
 
 ### MacOS
 

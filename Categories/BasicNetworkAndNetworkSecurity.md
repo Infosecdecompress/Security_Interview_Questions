@@ -110,7 +110,7 @@ Thus, DNS monitoring is very important since you can easily visit a website with
 
 Authoritative name servers store DNS record information –usually a DNS hosting provider or domain registrar. 
 
-Recursive name servers are the “middlemen” between authoritative servers and end-users because they have to recuse up the DNS tree to reach the name servers authoritative for storing the domain’s records.
+Recursive name servers are the “middlemen” between authoritative servers and end-users because they have to recurse up the DNS tree to reach the name servers authoritative for storing the domain’s records.
 
 #### What is DNS spoofing (cache poisoning)? How does it work?
 
@@ -192,7 +192,7 @@ A Distributed Denial of Service (DDoS) attack, however, uses multiple connected 
 
 Usually uses UDP, but might also use ICMP Echo Request or TCP SYN. TTL, or hop-limit.
 
-Initial hop-limit is 128 for windows and 64 for *nix. Destination returns ICMP Echo Reply
+Initial hop-limit is 128 for windows and 64 for *nix. With the default UDP probes, the destination returns an ICMP Port Unreachable (Destination Unreachable); intermediate hops return ICMP Time Exceeded. The ICMP variant (e.g. Windows tracert) gets an ICMP Echo Reply from the destination instead.
 
 #### How does Traceroute work?
 
