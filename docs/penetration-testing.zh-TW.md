@@ -3,28 +3,28 @@
 ### 三種攻擊方式 - 社交、實體、網路
 
 - **社交（Social）**
-  - 向對方索取存取權、網路釣魚（phishing）。
-  - 認知偏誤（Cognitive biases）- 觀察這些是如何被利用的。
-  - 魚叉式網路釣魚（Spear phishing）。
-  - 水坑攻擊（Water holing）。
-  - 誘餌攻擊（Baiting，散布 CD 或 USB 隨身碟並期望人們去使用它們）。
-  - 尾隨進入（Tailgating）。
+  - 向對方索取存取權、網路釣魚（phishing）
+  - 認知偏誤（Cognitive biases）- 觀察這些是如何被利用的
+  - 魚叉式網路釣魚（Spear phishing）
+  - 水坑攻擊（Water holing）
+  - 誘餌攻擊（Baiting，散布 CD 或 USB 隨身碟並期望人們去使用它們）
+  - 尾隨進入（Tailgating）
 - **實體（Physical）**
   - 取得硬碟存取權，它會被加密嗎？
-  - 從 linux 開機。
-  - 暴力破解密碼。
-  - 鍵盤側錄程式（Keylogger）。
-  - 頻率干擾（bluetooth/wifi）。
-  - 隱密的竊聽裝置。
-  - 隱藏的攝影機。
-  - 磁碟加密。
-  - Trusted Platform Module（TPM）。
-  - 透過非預期的無線電或電子訊號、聲音與振動進行窺探（TEMPEST - NSA）。
+  - 從 linux 開機
+  - 暴力破解密碼
+  - 鍵盤側錄程式（Keylogger）
+  - 頻率干擾（bluetooth/wifi）
+  - 隱密的竊聽裝置
+  - 隱藏的攝影機
+  - 磁碟加密
+  - Trusted Platform Module（TPM）
+  - 透過非預期的無線電或電子訊號、聲音與振動進行窺探（TEMPEST - NSA）
 - **網路（Network）**
-  - Nmap。
-  - 為任何執行中的服務尋找 CVE。
-  - 攔截攻擊（Interception attack）。
-  - 從網路上取得未受保護的資訊。
+  - Nmap
+  - 為任何執行中的服務尋找 CVE
+  - 攔截攻擊（Interception attack）
+  - 從網路上取得未受保護的資訊
 
 ### 漏洞攻擊套件（Exploit Kit）與偷渡式下載（drive-by download）攻擊
 

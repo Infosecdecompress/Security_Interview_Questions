@@ -36,9 +36,9 @@
 - 誰與它互動？
 - 有記錄與稽核哪些東西？
 - 網路架構圖。
-- 可見性接觸點。
-- 進站與出站過濾（Ingress and egress filtering）。
-- 先前的弱點評估。
+- 可見性接觸點
+- 進站與出站過濾（Ingress and egress filtering）
+- 先前的弱點評估
 
 關鍵在於看出他們能否在短短幾秒內迅速排出優先順序，判斷在一個未知情境中最重要、最該先了解的事情是什麼。
 
@@ -104,19 +104,19 @@
 - 資料執行防止（Data Execution Prevention，DEP）
 
 - 位址空間配置隨機化（Address space layout randomization，ASLR）
-  - 使緩衝區溢位更難在記憶體中已知位址執行特權指令。
+  - 使緩衝區溢位更難在記憶體中已知位址執行特權指令
 
 - 最小權限原則（Principle of least privilege）
   - 例如在處理程序權杖中停用 Administrator SID 來執行 Internet Explorer。降低緩衝區溢位漏洞利用以提權使用者身分執行的能力。
 
 - 程式碼簽署（Code signing）
-  - 要求核心模式（kernel mode）程式碼須經數位簽署。
+  - 要求核心模式（kernel mode）程式碼須經數位簽署
 
 - 編譯器安全功能
-  - 使用能攔截緩衝區溢位的編譯器。
+  - 使用能攔截緩衝區溢位的編譯器
 
 - 加密
-  - 針對軟體和／或韌體元件。
+  - 針對軟體和／或韌體元件
 
 - 強制存取控制（Mandatory Access Controls）
   - （MAC）

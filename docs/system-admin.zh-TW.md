@@ -4,27 +4,27 @@
 
 ### Windows
 
-- Windows 登錄檔（registry）與群組原則（group policy）。
-- Windows SMB。
-- Samba（搭配 SMB）。
-- 緩衝區溢位（Buffer Overflow）。
-- ROP。
+- Windows 登錄檔（registry）與群組原則（group policy）
+- Windows SMB
+- Samba（搭配 SMB）
+- 緩衝區溢位（Buffer Overflow）
+- ROP
 
 ### *nix
 
-- SELinux。
-- 核心（kernel）、使用者空間（userspace）、權限。
-- MAC vs DAC。
+- SELinux
+- 核心（kernel）、使用者空間（userspace）、權限
+- MAC vs DAC
 - /proc
-- /tmp - 程式碼可以儲存在這裡並被執行。
+- /tmp - 程式碼可以儲存在這裡並被執行
 - /shadow
 - LDAP - Lightweight Directory Access Protocol。讓使用者可以用一組密碼存取多項服務。這與 Windows 中的 Active Directory 類似。
 
 ### MacOS
 
-- Gotofail 錯誤（SSL）。
-- MacSweeper。
-- 研究 Mac 的弱點。
+- Gotofail 錯誤（SSL）
+- MacSweeper
+- 研究 Mac 的弱點
 
 #### Linux 相較於 Windows 的優勢與劣勢為何？
 
@@ -54,15 +54,15 @@ Cyber Crime（網路犯罪）：涉及網路或電腦、並利用其來犯案的
 
 ### 基礎設施（Prod / Cloud）虛擬化
 
-- Hypervisor（虛擬機器監視器）。
-- Hyperjacking。
-- 容器（Container）。
-- 逃逸（escaping）與權限提升（privilege escalation）技術。
-- 站台隔離（site isolation）。
-- 來自 VM／容器的網路連線。
-- 側通道攻擊（Side-channel attack）。
+- Hypervisor（虛擬機器監視器）
+- Hyperjacking
+- 容器（Container）
+- 逃逸（escaping）與權限提升（privilege escalation）技術
+- 站台隔離（site isolation）
+- 來自 VM／容器的網路連線
+- 側通道攻擊（Side-channel attack）
 - Google 的 Beyondcorp
-  - 信任主機，但不信任網路。
+  - 信任主機，但不信任網路
 
 ### 強化 Linux 伺服器的第一步
 
@@ -102,8 +102,8 @@ RCE 是指在目標上執行攻擊者提供的程式碼的能力，通常是衝�
 
 ### 本機資料庫
 
-- 有些通訊軟體使用 sqlite 來儲存訊息。
-- 對數位鑑識（digital forensics）很有用，尤其是在手機上。
+- 有些通訊軟體使用 sqlite 來儲存訊息
+- 對數位鑑識（digital forensics）很有用，尤其是在手機上
 
 ### IaaS？
 

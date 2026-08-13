@@ -20,8 +20,6 @@
 
 **DOM-based XSS：** 一種進階的 XSS 攻擊類型，當網頁應用程式的用戶端指令碼將使用者提供的資料寫入文件物件模型（Document Object Model，DOM）時便可能發生。該資料隨後被網頁應用程式從 DOM 讀取並輸出到瀏覽器。如果資料處理不當，攻擊者便可注入一段酬載，該酬載會被儲存為 DOM 的一部分，並在資料從 DOM 被讀回時執行。
 
-
-
 `<img src=””>` 通常會從其他網站載入內容，發出一個跨來源（cross-origin）的 HTTP 請求。
 
 ### 你會如何獵尋（hunt）XSS？
@@ -139,8 +137,8 @@ httponly——無法被 javascript 存取。
 #### 該如何防禦緩衝區溢位？
 
 - 安全的程式撰寫：對所有複製動作進行邊界檢查、使用有長度限制的函式（`strncpy`、`snprintf`），並優先選用記憶體安全的語言（Rust、Go、Java）。
-- 編譯器／作業系統緩解措施：stack canary、DEP／NX（堆疊不可執行）、ASLR、`FORTIFY_SOURCE`，以及控制流程完整性（control-flow integrity）。
-- 流程：程式碼審查、靜態分析，以及在發行前透過模糊測試（fuzzing）找出溢位問題。
+- 編譯器／作業系統緩解措施：stack canary、DEP／NX（堆疊不可執行）、ASLR、`FORTIFY_SOURCE`，以及控制流程完整性（control-flow integrity）
+- 流程：程式碼審查、靜態分析，以及在發行前透過模糊測試（fuzzing）找出溢位問題
 
 ### 目錄穿越（Directory traversal）
 

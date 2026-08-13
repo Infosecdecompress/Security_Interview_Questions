@@ -1,20 +1,20 @@
 # Threat Modeling
 
-### How does threat modeling work? 
+### How does threat modeling work?
 
-Identify 
+Identify
 
-* Potential threat 
+* Potential threat
 
-* Potential occurrence 
+* Potential occurrence
 
-* Concern Priority 
+* Concern Priority
 
-* Means to eradicate or mitigate threat 
+* Means to eradicate or mitigate threat
 
-Categorized 
+Categorized
 
-Analyze 
+Analyze
 
 ### What is STRIDE?
 
@@ -23,7 +23,7 @@ Analyze
 - Repudiation : Occurs when a user denies performing an action, but the target of the action has no     way to prove otherwise
 - Information Disclosure : disclosure of information to a user who does not have permission to see it
 - Denial of Service : Reducing the ability of valid users to access resources
-- Elevation of Privilege :  occurs when an unprivileged user gains privileged status.
+- Elevation of Privilege :  occurs when an unprivileged user gains privileged status
 
 ### What is DREAD?
 
@@ -40,4 +40,4 @@ Microsoft originally paired DREAD with STRIDE but later deprecated it because th
 1. Instant messaging system
 2. Password storage system
 3. Ecommerce store
-4. Given an application where a client wants to look up a service from service discovery provider.
+4. Given an application where a client wants to look up a service from service discovery provider

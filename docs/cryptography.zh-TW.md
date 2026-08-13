@@ -20,7 +20,7 @@
 
 非對稱式
 
-- [RSA（非對稱）](https://en.wikipedia.org/wiki/RSA_(cryptosystem))。
+- [RSA（非對稱）](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [ECC（也就是 ed25519）（非對稱）](https://en.wikipedia.org/wiki/EdDSA)
 - Diffie Hellman
 - El Gamal
@@ -93,9 +93,9 @@ MITM
 
 以區塊為基礎的加密演算法一次處理一個明文區塊，最適合用於你已知訊息大小的情境，例如檔案。串流密碼則處理單一單位的明文，例如一個位元或一個位元組，最適合用於你不確定訊息會有多長的情況。
 
-- [區塊密碼與串流密碼的比較](https://en.wikipedia.org/wiki/Cipher)。
-- [區塊密碼運作模式](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)。
-- [AES-GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode)。
+- [區塊密碼與串流密碼的比較](https://en.wikipedia.org/wiki/Cipher)
+- [區塊密碼運作模式](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
+- [AES-GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode)
 
 #### 常見的區塊密碼模式有哪些？
 
@@ -110,14 +110,14 @@ CBC（Cipher Block Chaining）對第一個區塊使用 IV，然後將前一個�
 ### 完整性與真實性基元（Integrity and authenticity primitives）
 
 - [雜湊函式，例如 MD5、Sha-1、BLAKE](https://en.wikipedia.org/wiki/Cryptographic_hash_function)。用於識別符，對於為惡意軟體樣本建立指紋非常有用。
-- [訊息驗證碼（MACs）](https://en.wikipedia.org/wiki/Message_authentication_code)。
-- [金鑰雜湊訊息驗證碼（HMAC）](https://en.wikipedia.org/wiki/HMAC)。
+- [訊息驗證碼（MACs）](https://en.wikipedia.org/wiki/Message_authentication_code)
+- [金鑰雜湊訊息驗證碼（HMAC）](https://en.wikipedia.org/wiki/HMAC)
 
 ### 熵（Entropy）
 
-- PRNG（虛擬亂數產生器）。
-- 熵緩衝區耗盡。
-- 填充熵緩衝區的方法。
+- PRNG（虛擬亂數產生器）
+- 熵緩衝區耗盡
+- 填充熵緩衝區的方法
 
 ### 進行個人身分驗證有哪些不同的方式
 
