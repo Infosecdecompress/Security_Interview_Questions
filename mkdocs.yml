@@ -32,7 +32,6 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.top
     - navigation.footer
@@ -60,6 +59,34 @@ nav:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: zh-TW
+          name: 繁體中文
+          build: true
+          site_name: 資安面試問題 · Security Interview Questions
+          nav_translations:
+            Home: 首頁
+            Application Security: 應用程式安全
+            Encryption & Authentication: 加密與身分驗證
+            Network & Network Security: 網路與網路安全
+            Cryptography: 密碼學
+            Security & Risk Management: 資安與風險管理
+            Security Ops & Incident Response: 資安維運與事件應變
+            Penetration Testing: 滲透測試
+            Threat Modeling: 威脅建模
+            System Admin: 系統管理
+            Security-Related Coding: 資安相關程式設計
+            Behavioral Questions: 行為面試問題
+            Interview & Study Tips: 面試與學習技巧
 
 markdown_extensions:
   - abbr

@@ -5,3 +5,6 @@
 site/
 .cache/
 __pycache__/
+
+# pyenv
+.venv/
