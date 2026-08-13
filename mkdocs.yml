@@ -9,6 +9,7 @@ copyright: Content licensed under CC BY-SA 4.0
 theme:
   name: material
   language: en
+  custom_dir: overrides
   logo: assets/images/icon_circle_small.png
   favicon: assets/favicon.ico
   icon:
