@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Q&A readability
+   Content convention on this site: a question / topic is a heading (h3 / h4)
+   and the answer is the body text beneath it. Material's default heading
+   styling is only slightly heavier than body text, so the two blur together.
+   These rules give questions a clear visual anchor (accent bar + colour +
+   spacing) so you can scan a page and instantly tell question from answer.
+   ========================================================================== */
+
+/* Main questions / section titles */
+.md-typeset h3 {
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+  margin-top: 2.5rem;
+  padding: 0.15rem 0 0.15rem 0.8rem;
+  border-left: 4px solid var(--md-primary-fg-color);
+  line-height: 1.45;
+}
+
+/* Follow-up / sub questions — distinct but secondary to h3 */
+.md-typeset h4 {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  margin-top: 1.9rem;
+  padding: 0.1rem 0 0.1rem 0.8rem;
+  border-left: 3px solid var(--md-default-fg-color--lighter);
+}
+
+/* Tighten the gap between a heading and the answer that follows it, so each
+   Q&A reads as one block while blocks stay well separated from each other. */
+.md-typeset h3 + p,
+.md-typeset h4 + p,
+.md-typeset h3 + ul,
+.md-typeset h3 + ol,
+.md-typeset h4 + ul,
+.md-typeset h4 + ol {
+  margin-top: 0.5rem;
+}
+
+/* The first heading on a page shouldn't push a big gap under the H1. */
+.md-typeset h1 + h3 {
+  margin-top: 1.2rem;
+}
